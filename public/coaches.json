@@ -1,0 +1,32 @@
+[
+  {
+    "image": "https://images.unsplash.com/photo-1605281317011-6c3b9b7c6f5b",
+    "name": "Grandmaster Elena Morozova",
+    "type": "Tournament Coach"
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+    "name": "IM Daniel Carter",
+    "type": "Strategy Coach"
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    "name": "FM Lucas Nguyen",
+    "type": "Tactics Coach"
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7",
+    "name": "WGM Priya Iyer",
+    "type": "Training Coach"
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1",
+    "name": "GM Carlos Estevez",
+    "type": "Opening Specialist"
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167",
+    "name": "Coach Maria Petrovic",
+    "type": "Endgame Coach"
+  }
+]
