@@ -1,19 +1,20 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <a>Home</a>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <a>Books</a>
+        <NavLink to={"/books"}>Books</NavLink>
       </li>
       <li>
-        <a>Courses</a>
+        <NavLink to={"/courses"}>Courses</NavLink>
       </li>
       <li>
-        <a>About Us</a>
+        <NavLink to={"/about"}>About Us</NavLink>
       </li>
     </>
   );
@@ -51,8 +52,9 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Contact</a>
+      <div className="navbar-end flex gap-3">
+        <a className="btn rounded-lg">Login</a>
+        <a className="btn rounded-lg">Register</a>
       </div>
     </div>
   );
