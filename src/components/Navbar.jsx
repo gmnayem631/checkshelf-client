@@ -20,7 +20,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-red-300 shadow-sm">
+    <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,14 +47,20 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">CheckShelf</a>
+        <a className="text-white font-bold text-xl">CheckShelf</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg">{links}</ul>
+        <ul className="menu menu-horizontal px-1 text-lg text-white">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end flex gap-3">
-        <a className="btn rounded-lg">Login</a>
-        <a className="btn rounded-lg">Register</a>
+        <a className="btn rounded-lg bg-[#EBBD67] border-none hover:bg-black hover:text-[#EBBD67]">
+          Login
+        </a>
+        <a className="btn rounded-lg btn-outline border-[#EBBD67] border-2 text-[#EBBD67] hover:bg-[#EBBD67] hover:text-black">
+          Register
+        </a>
       </div>
     </div>
   );
