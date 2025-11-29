@@ -1,7 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 const Navbar = () => {
+  const location = useLocation();
+  const currentLocation = location.pathname;
+  // console.log(currentLocation);
   const links = (
     <>
       <li>
@@ -20,7 +23,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar">
+    <div className={`navbar`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,18 +50,28 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="text-white font-bold text-xl">CheckShelf</a>
+        <a
+          className={`font-bold text-xl ${
+            currentLocation !== "/" ? "text-black" : "text-white"
+          }`}
+        >
+          CheckShelf
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg text-white">
+        <ul
+          className={`menu menu-horizontal px-1 text-lg ${
+            currentLocation !== "/" ? "text-black" : "text-white"
+          }`}
+        >
           {links}
         </ul>
       </div>
       <div className="navbar-end flex gap-3">
-        <a className="btn rounded-lg bg-[#EBBD67] border-none hover:bg-black hover:text-[#EBBD67]">
+        <a className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent">
           Login
         </a>
-        <a className="btn rounded-lg btn-outline border-[#EBBD67] border-2 text-[#EBBD67] hover:bg-[#EBBD67] hover:text-black">
+        <a className="btn rounded-lg btn-outline border-accent border-2 text-accent hover:bg-accent hover:text-black">
           Register
         </a>
       </div>

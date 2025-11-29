@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-accent: #ebbd67;
+}
+
 @layer base {
   body {
     @apply font-serif;
