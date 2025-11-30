@@ -49,7 +49,7 @@ const StatsBanner = () => {
                   start={0}
                   end={stat.number}
                   suffix={stat.suffix}
-                  duration={3}
+                  duration={5}
                 ></CountUp>
               </h3>
               <p className="text-gray-300 text-lg">{stat.label}</p>
