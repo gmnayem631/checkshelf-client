@@ -13,5 +13,6 @@
 @layer base {
   body {
     @apply font-serif;
+    @apply bg-[#fefce8];
   }
 }

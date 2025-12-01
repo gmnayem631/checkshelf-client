@@ -11,7 +11,6 @@ const MainLayout = () => {
       disable: "mobile",
       duration: 600,
       easing: "ease-in-sine",
-      delay: 100,
     });
   }, []);
   const location = useLocation();
