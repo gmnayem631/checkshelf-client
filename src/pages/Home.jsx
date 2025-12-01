@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import StatsBanner from "../components/StatsBanner";
 import DescriptionHome from "../components/DescriptionHome";
 import WhyChooseUs from "../components/WhyChooseUs";
+import Testimonials from "../components/Testimonials";
+import TestimonialCarousel from "../components/TestimonialCarousal";
 
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const Home = () => {
         <StatsBanner />
       </div>
       <WhyChooseUs />
+      {/* <Testimonials /> */}
+      <TestimonialCarousel />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import featureImg2 from "../assets/chess-3325010_1280.jpg";
 
 const DescriptionHome = () => {
   return (
-    <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-9">
+    <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-9 px-5">
       {/* Description 1 */}
       <div className="flex flex-col gap-4">
         <div className="" data-aos="fade-right">

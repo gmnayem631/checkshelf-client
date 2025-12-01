@@ -13,6 +13,7 @@
 @layer base {
   body {
     @apply font-serif;
+    /* @apply bg-[#f3e7db]; */
     @apply bg-[#fefce8];
   }
 }

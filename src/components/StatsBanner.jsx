@@ -41,7 +41,7 @@ const StatsBanner = () => {
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="flex flex-col items-center text-center gap-4 p-6 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="flex flex-col items-center text-center gap-4 p-6 rounded-lg bg-[#1e3a5f] hover:bg-[#1c385d] transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               <div className="text-accent">{stat.icon}</div>
               <h3 className="text-4xl font-bold text-white">

@@ -13,6 +13,8 @@
     "@tailwindcss/vite": "^4.1.17",
     "aos": "^2.3.4",
     "daisyui": "^5.5.5",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.555.0",
     "react": "^19.2.0",
     "react-countup": "^6.5.3",
