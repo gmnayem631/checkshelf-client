@@ -73,7 +73,7 @@ const TestimonialsCarousel = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-linear-to-b from-gray-50 to-white">
       <div className="max-w-5xl mx-auto px-5">
         {/* Header */}
         <div className="text-center mb-16">
