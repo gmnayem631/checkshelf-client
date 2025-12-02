@@ -16,7 +16,7 @@ const Home = () => {
         className="bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <Hero />
       </header>
       <div className="max-w-7xl mx-auto">

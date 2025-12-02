@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { Outlet, useLocation } from "react-router";
+import { Outlet } from "react-router";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,12 +13,11 @@ const MainLayout = () => {
       easing: "ease-in-sine",
     });
   }, []);
-  const location = useLocation();
-  const currentLocation = location.pathname;
+
   return (
     <div>
-      {currentLocation !== "/" && <Navbar />}
-
+      {/* {currentLocation !== "/" && <Navbar />} */}
+      <Navbar />
       <main>
         <Outlet></Outlet>
       </main>

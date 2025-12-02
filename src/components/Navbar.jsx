@@ -1,10 +1,7 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
-  const location = useLocation();
-  const currentLocation = location.pathname;
-  // console.log(currentLocation);
   const links = (
     <>
       <li>
@@ -23,7 +20,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className={`navbar`}>
+    <div className={`navbar sticky top-0 z-10 bg-white/35 backdrop-blur-lg`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,20 +47,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a
-          className={`font-bold text-xl ${
-            currentLocation !== "/" ? "text-black" : "text-white"
-          }`}
-        >
-          CheckShelf
-        </a>
+        <a className={`font-bold text-xl text-black`}>CheckShelf</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul
-          className={`menu menu-horizontal px-1 text-lg ${
-            currentLocation !== "/" ? "text-black" : "text-white"
-          }`}
-        >
+        <ul className={`menu menu-horizontal px-1 text-lg text-black`}>
           {links}
         </ul>
       </div>
