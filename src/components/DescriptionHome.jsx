@@ -1,6 +1,7 @@
 import React from "react";
 import featureImg1 from "../assets/chess-4067149_1280.jpg";
 import featureImg2 from "../assets/chess-3325010_1280.jpg";
+import { Link } from "react-router";
 
 const DescriptionHome = () => {
   return (
@@ -34,9 +35,11 @@ const DescriptionHome = () => {
           their chess journey.
         </p>
         <div className="mt-3">
-          <button className="btn bg-accent rounded-lg font-semibold">
-            Learn More
-          </button>
+          <Link to={"/about"}>
+            <button className="btn bg-accent rounded-lg font-semibold">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -55,7 +55,7 @@ const Values = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {values.map((value, index) => (
             <div
-              key={value.id}
+              key={index}
               className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-accent overflow-hidden"
             >
               {/* Large Number Background */}
