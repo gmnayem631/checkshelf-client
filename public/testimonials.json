@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Johnson",
+    "role": "Beginner",
+    "rating": 5,
+    "review": "CheckShelf transformed my chess game completely! The structured courses and weekly live sessions helped me go from knowing just the basics to confidently competing in local tournaments.",
+    "initials": "SJ",
+    "bgColor": "bg-blue-500"
+  },
+  {
+    "id": 2,
+    "name": "Michael Chen",
+    "role": "Intermediate",
+    "rating": 5,
+    "review": "The expert instructors really know their stuff. I love how they break down complex strategies into digestible lessons. The book collection is fantastic too!",
+    "initials": "MC",
+    "bgColor": "bg-green-500"
+  },
+  {
+    "id": 3,
+    "name": "Emma Williams",
+    "role": "Chess Enthusiast",
+    "rating": 4,
+    "review": "Best investment I've made in my chess journey. The lifetime access means I can revisit lessons whenever I need. The live Q&A sessions are incredibly valuable!",
+    "initials": "EW",
+    "bgColor": "bg-purple-500"
+  },
+  {
+    "id": 4,
+    "name": "David Martinez",
+    "role": "Advanced Beginner",
+    "rating": 5,
+    "review": "The depth of content is impressive. From opening theory to endgame mastery, CheckShelf covers everything. The community and live sessions are the cherry on top!",
+    "initials": "DM",
+    "bgColor": "bg-red-500"
+  }
+]
