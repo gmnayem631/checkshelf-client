@@ -27,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center px-5 py-12">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center px-5 py-12">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl"></div>
@@ -112,33 +112,10 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  className="h-4 w-4 text-accent focus:ring-accent border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="remember"
-                  className="ml-2 block text-sm text-gray-700"
-                >
-                  Remember me
-                </label>
-              </div>
-              <a
-                href="#"
-                className="text-sm text-accent hover:text-black font-medium transition-colors"
-              >
-                Forgot Password?
-              </a>
-            </div>
-
             {/* Submit Button */}
             <button
               onClick={handleSubmit}
-              className="w-full bg-accent text-black font-semibold py-3 px-4 rounded-lg hover:bg-black hover:text-accent transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="w-full bg-accent text-black font-semibold py-3 px-4 rounded-lg hover:bg-black cursor-pointer hover:text-accent transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Login
             </button>
@@ -159,7 +136,7 @@ const Login = () => {
           {/* Google Login Button */}
           <button
             onClick={handleGoogleLogin}
-            className="w-full flex items-center justify-center gap-3 bg-white border-2 border-gray-300 text-gray-700 font-semibold py-3 px-4 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
+            className="w-full flex items-center justify-center gap-3 bg-white border-2 border-gray-300 text-gray-700 font-semibold py-3 px-4 cursor-pointer rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -187,7 +164,7 @@ const Login = () => {
             Don't have an account?{" "}
             <a
               href="/register"
-              className="text-accent hover:text-black font-semibold transition-colors"
+              className="text-accent font-semibold transition-colors"
             >
               Register
             </a>
