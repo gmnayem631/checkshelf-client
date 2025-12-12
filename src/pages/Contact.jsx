@@ -179,8 +179,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FAQ Callout (Optional) */}
-      <section className="py-16 bg-gray-50">
+      {/* FAQ Callout */}
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-5 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Have Questions?

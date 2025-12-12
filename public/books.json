@@ -1,0 +1,511 @@
+[
+  {
+    "title": "My System",
+    "author": "Aron Nimzowitsch",
+    "price": 24.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,1",
+    "description": "A classic treatise on positional play, covering concepts like prophylaxis, overprotection, pawn structures, and strategic planning.",
+    "rating": 4.8,
+    "category": "Middlegame",
+    "pages": 320
+  },
+  {
+    "title": "Bobby Fischer Teaches Chess",
+    "author": "Bobby Fischer",
+    "price": 14.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,2",
+    "description": "A step-by-step explanation of tactical motifs designed for beginners and improvers.",
+    "rating": 4.7,
+    "category": "For Beginners",
+    "pages": 240
+  },
+  {
+    "title": "Silman's Complete Endgame Course",
+    "author": "Jeremy Silman",
+    "price": 29.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,3",
+    "description": "Endgame instruction divided by rating level, making it ideal for structured endgame learning.",
+    "rating": 4.9,
+    "category": "Endgames",
+    "pages": 530
+  },
+  {
+    "title": "Fundamental Chess Tactics",
+    "author": "Eric Schiller",
+    "price": 12.49,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,4",
+    "description": "A tactical training guide covering forks, pins, skewers, and mating patterns.",
+    "rating": 4.2,
+    "category": "Tactics",
+    "pages": 180
+  },
+  {
+    "title": "Reassess Your Chess",
+    "author": "Jeremy Silman",
+    "price": 19.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,5",
+    "description": "A modern guide to positional thinking and planning aimed at club players.",
+    "rating": 4.6,
+    "category": "Middlegame",
+    "pages": 400
+  },
+
+  {
+    "title": "Carlsen vs The World: Legendary Games",
+    "author": "Daniel Kingsley",
+    "price": 17.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,6",
+    "description": "A deep dive into Magnus Carlsen's most remarkable classical games.",
+    "rating": 4.8,
+    "category": "Famous Games",
+    "pages": 280
+  },
+  {
+    "title": "Mastering Chess Strategy",
+    "author": "Johan Hellsten",
+    "price": 34.95,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,7",
+    "description": "A comprehensive guide to strategic foundations for improving players.",
+    "rating": 4.7,
+    "category": "Middlegame",
+    "pages": 456
+  },
+  {
+    "title": "Understanding Chess Move by Move",
+    "author": "John Nunn",
+    "price": 21.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,8",
+    "description": "Nunn explains the logic behind every move in 30 instructive high-level games.",
+    "rating": 4.8,
+    "category": "For Beginners",
+    "pages": 304
+  },
+  {
+    "title": "Winning Chess Tactics",
+    "author": "Yasser Seirawan",
+    "price": 16.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,9",
+    "description": "A friendly introduction to tactical patterns from GM Seirawan.",
+    "rating": 4.6,
+    "category": "Tactics",
+    "pages": 256
+  },
+  {
+    "title": "The Art of Attack in Chess",
+    "author": "Vladimir Vukovic",
+    "price": 23.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,10",
+    "description": "A classic guide to attacking techniques including sacrifices, king hunts, and initiative.",
+    "rating": 4.9,
+    "category": "Middlegame",
+    "pages": 352
+  },
+
+  {
+    "title": "Chess Fundamentals",
+    "author": "José Capablanca",
+    "price": 11.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,11",
+    "description": "A timeless introductory guide written by the 3rd World Champion.",
+    "rating": 4.5,
+    "category": "For Beginners",
+    "pages": 180
+  },
+  {
+    "title": "The Life & Games of Mikhail Tal",
+    "author": "Mikhail Tal",
+    "price": 27.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,12",
+    "description": "Tal annotates his brilliant sacrificial masterpieces with humor and insight.",
+    "rating": 4.9,
+    "category": "Famous Games",
+    "pages": 520
+  },
+  {
+    "title": "Modern Chess Openings (MCO-15)",
+    "author": "Nick de Firmian",
+    "price": 39.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,13",
+    "description": "A comprehensive encyclopedia of opening theory for competitive players.",
+    "rating": 4.6,
+    "category": "Openings",
+    "pages": 752
+  },
+  {
+    "title": "The Sicilian Defense Explained",
+    "author": "Mark Dworetzky",
+    "price": 28.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,14",
+    "description": "An accessible breakdown of the Sicilian Defense, its plans, and key structures.",
+    "rating": 4.3,
+    "category": "Openings",
+    "pages": 390
+  },
+  {
+    "title": "The Power of Pawns",
+    "author": "Jörg Hickl",
+    "price": 15.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,15",
+    "description": "Learn how pawn structures drive middlegame and endgame planning.",
+    "rating": 4.4,
+    "category": "Middlegame",
+    "pages": 220
+  },
+
+  {
+    "title": "1001 Deadly Checkmates",
+    "author": "John Nunn",
+    "price": 18.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,16",
+    "description": "A collection of instructive mate-in-one and mate-in-two problems.",
+    "rating": 4.7,
+    "category": "Tactics",
+    "pages": 256
+  },
+  {
+    "title": "Endgame Manual (4th Edition)",
+    "author": "Mark Dvoretsky",
+    "price": 44.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,17",
+    "description": "The most authoritative endgame reference for advanced players.",
+    "rating": 5.0,
+    "category": "Endgames",
+    "pages": 456
+  },
+  {
+    "title": "Chess for Absolute Beginners",
+    "author": "Emily Torres",
+    "price": 10.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,18",
+    "description": "A simple introduction covering basic rules, tactics, and principles.",
+    "rating": 4.2,
+    "category": "For Beginners",
+    "pages": 160
+  },
+  {
+    "title": "Playing the King's Indian Defense",
+    "author": "Victor Bologan",
+    "price": 32.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,19",
+    "description": "A complete repertoire guide for Black using the dynamic King's Indian.",
+    "rating": 4.5,
+    "category": "Openings",
+    "pages": 432
+  },
+  {
+    "title": "The Chess Mind: Thinking Techniques",
+    "author": "Jack Matthews",
+    "price": 19.49,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,20",
+    "description": "Explains calculation shortcuts, conceptual thinking, and planning.",
+    "rating": 4.6,
+    "category": "Middlegame",
+    "pages": 280
+  },
+
+  {
+    "title": "Tal vs Botvinnik: The 1960 Match",
+    "author": "Isaac Boleslavsky",
+    "price": 17.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,21",
+    "description": "A move-by-move breakdown of one of history’s most dramatic world title matches.",
+    "rating": 4.7,
+    "category": "Famous Games",
+    "pages": 210
+  },
+  {
+    "title": "Solve Chess Like a Pro",
+    "author": "David Kline",
+    "price": 13.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,22",
+    "description": "A tactics-focused workbook for daily training.",
+    "rating": 4.4,
+    "category": "Tactics",
+    "pages": 190
+  },
+  {
+    "title": "Mastering the Endgame",
+    "author": "Glenn Flear",
+    "price": 21.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,23",
+    "description": "Practical endgame themes explained with detailed examples.",
+    "rating": 4.5,
+    "category": "Endgames",
+    "pages": 280
+  },
+  {
+    "title": "Attack and Defence",
+    "author": "Mark Dvoretsky",
+    "price": 29.49,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,24",
+    "description": "Explores advanced attacking motifs and the art of defending difficult positions.",
+    "rating": 4.8,
+    "category": "Middlegame",
+    "pages": 330
+  },
+  {
+    "title": "The Chess Tactician’s Notebook",
+    "author": "Leon Paulsen",
+    "price": 11.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,25",
+    "description": "A collection of puzzles arranged by theme and difficulty.",
+    "rating": 4.3,
+    "category": "Tactics",
+    "pages": 150
+  },
+
+  {
+    "title": "Game Collection of Hikaru Nakamura",
+    "author": "James Carlton",
+    "price": 26.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,26",
+    "description": "A curated selection of Nakamura’s dynamic wins explained move-by-move.",
+    "rating": 4.7,
+    "category": "Famous Games",
+    "pages": 340
+  },
+  {
+    "title": "How to Play the London System",
+    "author": "Cyrus Lakdawala",
+    "price": 19.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,27",
+    "description": "Everything you need to know to play the London System effectively.",
+    "rating": 4.5,
+    "category": "Openings",
+    "pages": 300
+  },
+  {
+    "title": "Chess Mastery Made Simple",
+    "author": "Anna Reynolds",
+    "price": 22.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,28",
+    "description": "A beginner-to-intermediate guide focusing on intuitive understanding.",
+    "rating": 4.4,
+    "category": "For Beginners",
+    "pages": 270
+  },
+  {
+    "title": "Pawn Endgames Explained",
+    "author": "Alex Vermeer",
+    "price": 33.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,29",
+    "description": "A thorough study of pawn endgames and key theoretical positions.",
+    "rating": 4.6,
+    "category": "Endgames",
+    "pages": 410
+  },
+  {
+    "title": "The Psychology of Chess",
+    "author": "Peter Wilson",
+    "price": 14.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,30",
+    "description": "Explore mindset, intuition, and emotional resilience in competitive play.",
+    "rating": 4.3,
+    "category": "For Beginners",
+    "pages": 210
+  },
+
+  {
+    "title": "Best Games of Garry Kasparov",
+    "author": "Garry Kasparov",
+    "price": 39.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,31",
+    "description": "Kasparov analyzes his own strongest classical masterpieces.",
+    "rating": 5.0,
+    "category": "Famous Games",
+    "pages": 540
+  },
+  {
+    "title": "The Italian Game Guide",
+    "author": "Timothy Harris",
+    "price": 18.49,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,32",
+    "description": "A complete introduction to the Italian Opening for beginners and improvers.",
+    "rating": 4.4,
+    "category": "Openings",
+    "pages": 260
+  },
+  {
+    "title": "Crush Your Opponent",
+    "author": "Emily Shore",
+    "price": 16.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,33",
+    "description": "Practical attacking ideas for club players.",
+    "rating": 4.2,
+    "category": "Middlegame",
+    "pages": 230
+  },
+  {
+    "title": "The Complete Chess Workout",
+    "author": "Graham Burgess",
+    "price": 28.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,34",
+    "description": "1200 puzzles designed to sharpen tactical and strategic awareness.",
+    "rating": 4.7,
+    "category": "Tactics",
+    "pages": 448
+  },
+  {
+    "title": "The Endgame Toolbox",
+    "author": "Sarah Linton",
+    "price": 21.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,35",
+    "description": "A practical guide to essential endgame knowledge for improving players.",
+    "rating": 4.5,
+    "category": "Endgames",
+    "pages": 300
+  },
+
+  {
+    "title": "Winning with the French Defense",
+    "author": "Susan Romero",
+    "price": 25.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,36",
+    "description": "A modern guide to playing the French Defense successfully.",
+    "rating": 4.4,
+    "category": "Openings",
+    "pages": 370
+  },
+  {
+    "title": "Strategic Chess Mastery",
+    "author": "Michael Harper",
+    "price": 24.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,37",
+    "description": "Focuses on strategic themes every competitive player must know.",
+    "rating": 4.6,
+    "category": "Middlegame",
+    "pages": 312
+  },
+  {
+    "title": "Rapid Chess Improvement",
+    "author": "Igor Khmelnitsky",
+    "price": 19.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,38",
+    "description": "Self-assessment techniques and targeted improvement guides.",
+    "rating": 4.4,
+    "category": "For Beginners",
+    "pages": 200
+  },
+  {
+    "title": "The Najdorf Bible",
+    "author": "Tomas Haeberli",
+    "price": 32.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,39",
+    "description": "A deep dive into the Sicilian Najdorf for tournament players.",
+    "rating": 4.7,
+    "category": "Openings",
+    "pages": 450
+  },
+  {
+    "title": "Tactical Motifs Explained",
+    "author": "Ethan Rowe",
+    "price": 17.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,40",
+    "description": "A detailed look at 50 core tactical ideas with examples and exercises.",
+    "rating": 4.5,
+    "category": "Tactics",
+    "pages": 280
+  },
+
+  {
+    "title": "The Queen's Gambit Companion",
+    "author": "Laura Bennett",
+    "price": 21.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,41",
+    "description": "A complete guide to classical and modern Queen’s Gambit theory.",
+    "rating": 4.4,
+    "category": "Openings",
+    "pages": 330
+  },
+  {
+    "title": "Kramnik: My Best Games",
+    "author": "Vladimir Kramnik",
+    "price": 34.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,42",
+    "description": "Kramnik annotates his best positional masterpieces.",
+    "rating": 4.9,
+    "category": "Famous Games",
+    "pages": 500
+  },
+  {
+    "title": "Endgames for Club Players",
+    "author": "James Peterson",
+    "price": 18.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,43",
+    "description": "Straightforward explanations of rook, bishop, and pawn endings.",
+    "rating": 4.4,
+    "category": "Endgames",
+    "pages": 250
+  },
+  {
+    "title": "Master the Middlegame",
+    "author": "David Shaw",
+    "price": 23.49,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,44",
+    "description": "Learn positional play through real instructive examples.",
+    "rating": 4.5,
+    "category": "Middlegame",
+    "pages": 310
+  },
+  {
+    "title": "The Tactical Genius",
+    "author": "Oliver Bryant",
+    "price": 15.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,45",
+    "description": "Advanced tactical patterns and calculation exercises.",
+    "rating": 4.3,
+    "category": "Tactics",
+    "pages": 220
+  },
+
+  {
+    "title": "Play Chess Like a Champion",
+    "author": "Sandra Walker",
+    "price": 12.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,46",
+    "description": "A beginner-friendly introduction to fundamental principles.",
+    "rating": 4.2,
+    "category": "For Beginners",
+    "pages": 180
+  },
+  {
+    "title": "The Caro-Kann Blueprint",
+    "author": "Jacob Meyers",
+    "price": 27.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,47",
+    "description": "A serious study of the Caro-Kann Defense for Black.",
+    "rating": 4.5,
+    "category": "Openings",
+    "pages": 350
+  },
+  {
+    "title": "Chess Heroes: Iconic Games",
+    "author": "Thomas Reed",
+    "price": 19.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,48",
+    "description": "A curated collection of historically significant games.",
+    "rating": 4.4,
+    "category": "Famous Games",
+    "pages": 290
+  },
+  {
+    "title": "Practical Endgame Skills",
+    "author": "Harold Lim",
+    "price": 22.5,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,49",
+    "description": "Improving players learn the endgame patterns that win tournaments.",
+    "rating": 4.5,
+    "category": "Endgames",
+    "pages": 260
+  },
+  {
+    "title": "Ultimate Chess Tactics Manual",
+    "author": "Derek Fischer",
+    "price": 18.99,
+    "coverPage": "https://source.unsplash.com/600x800/?chess,book,50",
+    "description": "Large collection of puzzles focusing on real-game tactics.",
+    "rating": 4.6,
+    "category": "Tactics",
+    "pages": 400
+  }
+]

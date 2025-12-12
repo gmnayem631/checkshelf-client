@@ -1,0 +1,289 @@
+[
+  {
+    "category": "Openings",
+    "title": "Mastering the Sicilian Defense",
+    "instructor": "GM Alexei Romanov",
+    "instructorFideRating": 2560,
+    "duration": "4.5 hours",
+    "numberOfLessons": 22,
+    "skillLevel": "Intermediate",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,1",
+    "description": "A deep dive into the Sicilian Defense with modern theory, model games, and practical plans.",
+    "price": 89.99,
+    "studentsEnrolled": 2400,
+    "whatYouWillLearn": [
+      "Understand main Sicilian structures",
+      "Learn attacking motifs for both sides",
+      "Build a complete repertoire",
+      "Learn modern theory efficiently"
+    ],
+    "isBestseller": true
+  },
+  {
+    "category": "Beginner Training",
+    "title": "Chess for Total Beginners",
+    "instructor": "IM Sarah Collins",
+    "instructorFideRating": 2320,
+    "duration": "3 hours",
+    "numberOfLessons": 18,
+    "skillLevel": "Beginner",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,2",
+    "description": "Learn the rules, basic tactics, opening principles, and how to think during a game.",
+    "price": 39.99,
+    "studentsEnrolled": 5200,
+    "whatYouWillLearn": [
+      "All rules of chess",
+      "Basic tactics",
+      "Opening principles",
+      "How to avoid beginner mistakes"
+    ],
+    "isBestseller": true
+  },
+  {
+    "category": "Endgames",
+    "title": "Essential Endgames Every Player Must Know",
+    "instructor": "GM Peter Larsen",
+    "instructorFideRating": 2490,
+    "duration": "4 hours",
+    "numberOfLessons": 20,
+    "skillLevel": "All Levels",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,3",
+    "description": "Covers foundational endgame positions such as king and pawn, rook endings, and basic techniques.",
+    "price": 59.99,
+    "studentsEnrolled": 3100,
+    "whatYouWillLearn": [
+      "Key theoretical endgames",
+      "Pawn breakthrough techniques",
+      "Rook endgame mastery"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Strategy",
+    "title": "Positional Chess Mastery",
+    "instructor": "GM Viktor Kazimov",
+    "instructorFideRating": 2615,
+    "duration": "5.5 hours",
+    "numberOfLessons": 28,
+    "skillLevel": "Advanced",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,4",
+    "description": "Learn advanced positional ideas including outposts, weak squares, and long-term planning.",
+    "price": 149.99,
+    "studentsEnrolled": 1800,
+    "whatYouWillLearn": [
+      "Plan like a grandmaster",
+      "Improve positional evaluation",
+      "Master long-term strategy"
+    ],
+    "isBestseller": true
+  },
+  {
+    "category": "Tactics",
+    "title": "Tactical Patterns & Calculation",
+    "instructor": "IM David Rios",
+    "instructorFideRating": 2405,
+    "duration": "3.5 hours",
+    "numberOfLessons": 19,
+    "skillLevel": "Intermediate",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,5",
+    "description": "Sharpen your calculation skills and learn advanced tactical motifs.",
+    "price": 69.99,
+    "studentsEnrolled": 2700,
+    "whatYouWillLearn": [
+      "Calculation shortcuts",
+      "Recognizing tactical patterns",
+      "Solving complex combinations"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Opening Repertoire",
+    "title": "Complete London System Repertoire",
+    "instructor": "FM Jonathan Keller",
+    "instructorFideRating": 2210,
+    "duration": "3 hours",
+    "numberOfLessons": 14,
+    "skillLevel": "Beginner",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,6",
+    "description": "A full London System repertoire suitable for all rating levels.",
+    "price": 49.99,
+    "studentsEnrolled": 1600,
+    "whatYouWillLearn": [
+      "London System model plans",
+      "Common tactical motifs",
+      "How to handle sidelines"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Middlegame Planning",
+    "title": "How to Think in the Middlegame",
+    "instructor": "GM Pavel Ignatiev",
+    "instructorFideRating": 2550,
+    "duration": "5 hours",
+    "numberOfLessons": 25,
+    "skillLevel": "All Levels",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,7",
+    "description": "Teaches strategic planning, identifying weaknesses, and typical middlegame structures.",
+    "price": 129.99,
+    "studentsEnrolled": 2100,
+    "whatYouWillLearn": [
+      "Middlegame patterns",
+      "Key strategic concepts",
+      "Evaluating positions"
+    ],
+    "isBestseller": true
+  },
+  {
+    "category": "Beginner",
+    "title": "From 0 to 1000: Beginner Training Camp",
+    "instructor": "WFM Diana Petrova",
+    "instructorFideRating": 2020,
+    "duration": "2.5 hours",
+    "numberOfLessons": 12,
+    "skillLevel": "Beginner",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,8",
+    "description": "A complete beginner’s roadmap to reach the 1000 rating level.",
+    "price": 29.99,
+    "studentsEnrolled": 4700,
+    "whatYouWillLearn": [
+      "Basic openings",
+      "Tactical awareness",
+      "Avoiding blunders"
+    ],
+    "isBestseller": true
+  },
+  {
+    "category": "Openings",
+    "title": "The Complete King's Indian Defense",
+    "instructor": "GM Bhavik Rao",
+    "instructorFideRating": 2485,
+    "duration": "4 hours",
+    "numberOfLessons": 23,
+    "skillLevel": "Advanced",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,9",
+    "description": "Comprehensive KID theory and deep strategic themes.",
+    "price": 119.99,
+    "studentsEnrolled": 1500,
+    "whatYouWillLearn": [
+      "Key KID positions",
+      "Attacking schemes",
+      "Plans for both sides"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Tactics",
+    "title": "Advanced Chess Tactics Bootcamp",
+    "instructor": "IM Chen Zhao",
+    "instructorFideRating": 2380,
+    "duration": "4 hours",
+    "numberOfLessons": 21,
+    "skillLevel": "Advanced",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,10",
+    "description": "Full tactical bootcamp for strong club players.",
+    "price": 79.99,
+    "studentsEnrolled": 1900,
+    "whatYouWillLearn": [
+      "Calculation training",
+      "Complex tactical motifs",
+      "Pattern recognition"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Famous Games",
+    "title": "The Greatest Games Ever Played",
+    "instructor": "GM Roman Yusupov",
+    "instructorFideRating": 2590,
+    "duration": "5 hours",
+    "numberOfLessons": 20,
+    "skillLevel": "All Levels",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,11",
+    "description": "Analysis of the most iconic chess games in history.",
+    "price": 99.99,
+    "studentsEnrolled": 1400,
+    "whatYouWillLearn": [
+      "Game analysis",
+      "Strategic themes",
+      "Historical perspective"
+    ],
+    "isBestseller": true
+  },
+  {
+    "category": "Endgames",
+    "title": "Rook Endgames Simplified",
+    "instructor": "FM Lior Segal",
+    "instructorFideRating": 2230,
+    "duration": "2.5 hours",
+    "numberOfLessons": 15,
+    "skillLevel": "Intermediate",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,12",
+    "description": "Practical rook endgame lessons for competitive players.",
+    "price": 39.99,
+    "studentsEnrolled": 1300,
+    "whatYouWillLearn": [
+      "Lucena and Philidor",
+      "Key rook endgame principles",
+      "Common practical patterns"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Strategy",
+    "title": "The Science of Chess Strategy",
+    "instructor": "GM Enrique Samora",
+    "instructorFideRating": 2675,
+    "duration": "6 hours",
+    "numberOfLessons": 30,
+    "skillLevel": "Advanced",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,13",
+    "description": "Advanced course on strategic planning and decision making.",
+    "price": 199.99,
+    "studentsEnrolled": 900,
+    "whatYouWillLearn": [
+      "Strategic frameworks",
+      "Deep calculation",
+      "Understanding complex positions"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Middlegame",
+    "title": "Typical Middlegame Structures Explained",
+    "instructor": "IM Robert Kane",
+    "instructorFideRating": 2360,
+    "duration": "3 hours",
+    "numberOfLessons": 16,
+    "skillLevel": "Intermediate",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,14",
+    "description": "Learn classical middlegame structures like IQP, isolated pawn, and minority attack.",
+    "price": 59.99,
+    "studentsEnrolled": 2500,
+    "whatYouWillLearn": [
+      "Strategic structures",
+      "Key plans for both sides",
+      "Model examples"
+    ],
+    "isBestseller": false
+  },
+  {
+    "category": "Tactics",
+    "title": "Pattern Recognition for Club Players",
+    "instructor": "FM Richard Hales",
+    "instructorFideRating": 2140,
+    "duration": "2 hours",
+    "numberOfLessons": 10,
+    "skillLevel": "All Levels",
+    "thumbnail": "https://source.unsplash.com/800x600/?chess,course,15",
+    "description": "A foundational course for recognizing tactical patterns quickly.",
+    "price": 34.99,
+    "studentsEnrolled": 3600,
+    "whatYouWillLearn": [
+      "All key tactical patterns",
+      "Quick recognition skills",
+      "Improving puzzle speed"
+    ],
+    "isBestseller": true
+  }
+]
