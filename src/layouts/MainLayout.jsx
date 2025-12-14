@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 const MainLayout = () => {
   const location = useLocation();
   const currentLocation = location.pathname;
-  console.log(currentLocation);
+
   useEffect(() => {
     AOS.init({
       disable: "mobile",
@@ -24,8 +24,7 @@ const MainLayout = () => {
       </header>
       <main
         className={`${
-          (currentLocation !== "/" && "pt-24") ||
-          (currentLocation !== "/about" && "pt-24")
+          currentLocation !== "/" && currentLocation !== "/about" && "pt-24"
         }`}
       >
         <Outlet></Outlet>
