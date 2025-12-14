@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const MainLayout = () => {
+  const location = useLocation();
+  const currentLocation = location.pathname;
+  console.log(currentLocation);
   useEffect(() => {
     AOS.init({
       disable: "mobile",
@@ -16,9 +19,15 @@ const MainLayout = () => {
 
   return (
     <div>
-      {/* {currentLocation !== "/" && <Navbar />} */}
-      <Navbar />
-      <main>
+      <header className="">
+        <Navbar />
+      </header>
+      <main
+        className={`${
+          (currentLocation !== "/" && "pt-24") ||
+          (currentLocation !== "/about" && "pt-24")
+        }`}
+      >
         <Outlet></Outlet>
       </main>
       <footer>

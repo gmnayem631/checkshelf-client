@@ -20,7 +20,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className={`navbar bg-white/35 backdrop-blur-lg`}>
+    <div
+      className={`navbar bg-[#5f666c] fixed inset-x-0 rounded-full my-4 px-3 backdrop-blur-lg max-w-5xl mx-auto shadow-xl z-99`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,10 +49,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className={`font-bold text-xl text-black`}>CheckShelf</a>
+        <a className={`font-bold text-xl text-white`}>CheckShelf</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className={`menu menu-horizontal px-1 text-lg text-black`}>
+        <ul className={`menu menu-horizontal px-1 text-lg text-white`}>
           {links}
         </ul>
       </div>
