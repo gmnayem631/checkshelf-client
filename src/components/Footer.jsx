@@ -21,7 +21,9 @@ const Footer = () => {
         <Link to={"/terms"} className="link link-hover">
           Terms of use
         </Link>
-        <a className="link link-hover">Privacy policy</a>
+        <Link to={"/privacy"} className="link link-hover">
+          Privacy policy
+        </Link>
       </nav>
       <form>
         <h6 className="footer-title">Newsletter</h6>

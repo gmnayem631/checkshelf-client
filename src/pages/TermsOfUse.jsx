@@ -135,7 +135,7 @@ const TermsOfUse = () => {
       </section>
 
       {/* Important Notice */}
-      <section className="py-8 bg-yellow-50 border-y border-yellow-200">
+      <section className="py-8 bg-white border-y border-yellow-200">
         <div className="max-w-4xl mx-auto px-5">
           <div className="flex gap-4 items-start">
             <AlertCircle className="w-6 h-6 text-yellow-600 shrink mt-1" />
@@ -153,7 +153,7 @@ const TermsOfUse = () => {
       </section>
 
       {/* Terms Content */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-5">
           <div className="space-y-10">
             {sections.map((section) => (
@@ -178,7 +178,7 @@ const TermsOfUse = () => {
       </section>
 
       {/* Summary/Footer Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-5">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
             <div className="flex items-start gap-4">
