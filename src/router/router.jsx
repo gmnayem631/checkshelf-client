@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Contact from "../pages/Contact";
+import TermsOfUse from "../pages/TermsOfUse";
 
 const router = createBrowserRouter([
   {
@@ -30,16 +31,20 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login />,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register />,
       },
       {
-        path: "contact",
+        path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/terms",
+        element: <TermsOfUse />,
       },
     ],
   },
