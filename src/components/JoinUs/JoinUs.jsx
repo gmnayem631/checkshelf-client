@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import joinUsFeatured from "../assets/join-us-1.jpg";
+import joinUsFeatured from "../../assets/join-us-1.jpg";
 import { Link } from "react-router";
 
 const JoinUs = () => {

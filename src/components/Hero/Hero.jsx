@@ -1,7 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
-import heroBg from "../assets/hero-bg-1.jpg";
+import heroBg from "../../assets/hero-bg-1.jpg";
 
 const Hero = () => {
   return (
@@ -27,7 +27,10 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-4 flex gap-4">
-          <Link className="btn rounded-xl bg-accent text-black border-none hover:bg-black hover:text-accent px-8">
+          <Link
+            to={"/books"}
+            className="btn rounded-xl bg-accent text-black border-none hover:bg-black hover:text-accent px-8"
+          >
             Discover More
           </Link>
 

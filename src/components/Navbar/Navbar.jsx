@@ -47,7 +47,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className={`font-bold text-xl`}>CheckShelf</a>
+        <Link to={"/"} className={`font-bold text-xl`}>
+          CheckShelf
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className={`menu menu-horizontal px-1 text-lg`}>{links}</ul>

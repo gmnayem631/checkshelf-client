@@ -1,14 +1,14 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/Home";
-import Books from "../pages/Books";
-import Courses from "../pages/Courses";
-import About from "../pages/About";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import Contact from "../pages/Contact";
-import TermsOfUse from "../pages/TermsOfUse";
-import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Home from "../pages/Home/Home";
+import Books from "../pages/Books/Books";
+import Courses from "../pages/Courses/Courses";
+import About from "../pages/About/About";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import Contact from "../pages/Contact/Contact";
+import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {

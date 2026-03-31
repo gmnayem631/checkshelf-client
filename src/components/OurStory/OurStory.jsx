@@ -1,6 +1,6 @@
 import React from "react";
 import { Target, Heart, Lightbulb } from "lucide-react";
-import storyImg from "../assets/story-img.gif"; // <-- use any premium chess image
+import storyImg from "../../assets/story-img.gif"; // <-- use any premium chess image
 
 const OurStory = () => {
   return (

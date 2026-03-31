@@ -2,21 +2,21 @@ import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Quote } from "lucide-react";
-import testimonials from "../../public/testimonials.json";
+import testimonials from "../../../public/testimonials.json";
 
 const TestimonialsCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "center", skipSnaps: false },
-    [Autoplay({ delay: 4000 })]
+    [Autoplay({ delay: 4000 })],
   );
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
+    [emblaApi],
   );
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
+    [emblaApi],
   );
 
   const renderStars = (rating) => {

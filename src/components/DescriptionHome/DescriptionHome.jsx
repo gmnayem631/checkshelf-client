@@ -1,6 +1,6 @@
 import React from "react";
-import featureImg1 from "../assets/chess-4067149_1280.jpg";
-import featureImg2 from "../assets/chess-3325010_1280.jpg";
+import featureImg1 from "../../assets/chess-4067149_1280.jpg";
+import featureImg2 from "../../assets/chess-3325010_1280.jpg";
 import { Link } from "react-router";
 
 const DescriptionHome = () => {
