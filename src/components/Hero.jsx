@@ -1,10 +1,14 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
+import heroBg from "../assets/hero-bg-1.jpg";
 
 const Hero = () => {
   return (
-    <section className="text-white py-36 px-5 relative">
+    <section
+      className="text-white py-36 px-5 relative bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col gap-6">
         <p className="tracking-widest text-accent font-semibold">
           WELCOME TO CHECKSHELF

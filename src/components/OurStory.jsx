@@ -9,14 +9,12 @@ const OurStory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Image */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden">
               <img
                 src={storyImg}
                 alt="Our Story Chess"
-                className="w-[128] md:w-2xs group-hover:scale-105 transition-all duration-700"
+                className="w-auto md:w-2xs group-hover:scale-105 transition-all duration-700"
               />
-              {/* Subtle dark overlay */}
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-700"></div>
             </div>
 
             {/* Decorative accent bubble */}

@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const DescriptionHome = () => {
   return (
-    <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-9 px-5">
+    <div className="max-w-11/12 mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-9 px-5">
       {/* Description 1 */}
       <div className="flex flex-col gap-4">
         <div className="" data-aos="fade-right">
