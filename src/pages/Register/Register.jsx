@@ -1,12 +1,24 @@
-import React from "react";
+import React, { use } from "react";
 import { Mail, Lock, Eye, EyeOff, User } from "lucide-react";
 import { Link } from "react-router";
+import AuthContext from "../../context/AuthContext";
 
 const Register = () => {
+  const { createUser } = use(AuthContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Register submitted:");
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, email, password);
+    createUser(email, password)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleGoogleLogin = () => {
