@@ -1,9 +1,10 @@
 import React from "react";
 import { ArrowRight, BookOpen } from "lucide-react";
+import { Link } from "react-router";
 
 const CallToAction = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-r from-gray-900 via-gray-800 to-black overflow-hidden">
+    <section className="relative py-20 bg-linear-to-r from-gray-900 via-gray-800 to-black overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
@@ -34,21 +35,21 @@ const CallToAction = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="/courses"
+          <Link
+            to={"/courses"}
             className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-black font-semibold rounded-xl hover:bg-white transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <BookOpen className="w-5 h-5" />
             Browse Courses
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          </Link>
 
-          <a
-            href="/"
+          <Link
+            to={"/books"}
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent text-accent font-semibold rounded-xl hover:bg-accent hover:text-black transition-all duration-300 hover:scale-105"
           >
             Explore Books
-          </a>
+          </Link>
         </div>
 
         {/* Trust indicator */}

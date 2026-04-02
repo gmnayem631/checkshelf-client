@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const links = (
@@ -47,7 +48,11 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to={"/"} className={`font-bold text-xl`}>
+        <Link
+          to={"/"}
+          className={"flex justify-center items-center font-bold text-xl"}
+        >
+          <img src={logo} alt="" className="h-16" />
           CheckShelf
         </Link>
       </div>

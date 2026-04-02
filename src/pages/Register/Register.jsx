@@ -1,50 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Mail, Lock, Eye, EyeOff, User } from "lucide-react";
+import { Link } from "react-router";
 
 const Register = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic password match validation
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-
-    console.log("Register submitted:", formData);
-    // Add your registration logic here
+    console.log("Register submitted:");
   };
 
-  const handleGoogleSignup = () => {
+  const handleGoogleLogin = () => {
     console.log("Google signup clicked");
-    // Add Google signup logic here
   };
 
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center px-5 py-12">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl"></div>
-      </div>
-
       {/* Register Card */}
-      <div className="relative z-10 w-full max-w-md">
+      <div className="w-full max-w-md">
         {/* Logo/Brand */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">CheckShelf</h1>
@@ -59,13 +31,10 @@ const Register = () => {
             Create Account
           </h2>
 
-          <div className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {/* Name Input */}
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name
               </label>
               <div className="relative">
@@ -74,11 +43,7 @@ const Register = () => {
                 </div>
                 <input
                   type="text"
-                  id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
                   className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                   placeholder="John Doe"
                 />
@@ -87,10 +52,7 @@ const Register = () => {
 
             {/* Email Input */}
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
               </label>
               <div className="relative">
@@ -99,11 +61,7 @@ const Register = () => {
                 </div>
                 <input
                   type="email"
-                  id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
                   className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                   placeholder="your.email@example.com"
                 />
@@ -112,10 +70,7 @@ const Register = () => {
 
             {/* Password Input */}
             <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
               </label>
               <div className="relative">
@@ -123,26 +78,17 @@ const Register = () => {
                   <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
-                  type={showPassword ? "text" : "password"}
-                  id="password"
+                  type="password"
                   name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
                   minLength="6"
                   className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                   placeholder="••••••••"
                 />
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
                   className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
                 >
-                  {showPassword ? (
-                    <EyeOff className="h-5 w-5" />
-                  ) : (
-                    <Eye className="h-5 w-5" />
-                  )}
+                  <Eye className="h-5 w-5" />
                 </button>
               </div>
               <p className="mt-1 text-xs text-gray-500">
@@ -151,13 +97,10 @@ const Register = () => {
             </div>
 
             {/* Submit Button */}
-            <button
-              onClick={handleSubmit}
-              className="w-full bg-accent text-black font-semibold py-3 px-4 rounded-lg hover:bg-black hover:text-accent transition-all duration-300 transform shadow-lg cursor-pointer"
-            >
+            <button className="w-full bg-accent text-black font-semibold py-3 px-4 rounded-lg hover:bg-black hover:text-accent transition-all duration-300 transform shadow-lg cursor-pointer">
               Create Account
             </button>
-          </div>
+          </form>
 
           {/* Divider */}
           <div className="relative my-6">
@@ -173,7 +116,7 @@ const Register = () => {
 
           {/* Google Signup Button */}
           <button
-            onClick={handleGoogleSignup}
+            onClick={handleGoogleLogin}
             className="w-full flex items-center justify-center gap-3 bg-white border-2 border-gray-300 text-gray-700 font-semibold py-3 px-4 rounded-lg cursor-pointer hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -200,12 +143,12 @@ const Register = () => {
           {/* Login Link */}
           <p className="mt-6 text-center text-sm text-gray-600">
             Already have an account?{" "}
-            <a
-              href="/login"
+            <Link
+              to={"/login"}
               className="text-accent hover:text-black font-semibold transition-colors"
             >
               Login
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -1,39 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router";
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login submitted:", formData);
-    // Add your login logic here
+    console.log("Login submitted:");
   };
 
   const handleGoogleLogin = () => {
     console.log("Google login clicked");
-    // Add Google login logic here
   };
 
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center px-5 py-12">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent opacity-10 rounded-full blur-3xl"></div>
-      </div>
-
       {/* Login Card */}
       <div className="relative z-10 w-full max-w-md">
         {/* Logo/Brand */}
@@ -50,7 +30,7 @@ const Login = () => {
             Login
           </h2>
 
-          <div className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email Input */}
             <div>
               <label
@@ -65,11 +45,7 @@ const Login = () => {
                 </div>
                 <input
                   type="email"
-                  id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
                   className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                   placeholder="your.email@example.com"
                 />
@@ -89,37 +65,22 @@ const Login = () => {
                   <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
-                  type={showPassword ? "text" : "password"}
-                  id="password"
+                  type="password"
                   name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
                   className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                   placeholder="••••••••"
                 />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
-                >
-                  {showPassword ? (
-                    <EyeOff className="h-5 w-5" />
-                  ) : (
-                    <Eye className="h-5 w-5" />
-                  )}
+                <button className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600">
+                  <Eye className="h-5 w-5" />
                 </button>
               </div>
             </div>
 
             {/* Submit Button */}
-            <button
-              onClick={handleSubmit}
-              className="w-full bg-accent text-black font-semibold py-3 px-4 rounded-lg hover:bg-black cursor-pointer hover:text-accent transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
+            <button className="w-full bg-accent text-black font-semibold py-3 px-4 rounded-lg hover:bg-black cursor-pointer hover:text-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
               Login
             </button>
-          </div>
+          </form>
 
           {/* Divider */}
           <div className="relative my-6">
@@ -162,12 +123,12 @@ const Login = () => {
           {/* Register Link */}
           <p className="mt-6 text-center text-sm text-gray-600">
             Don't have an account?{" "}
-            <a
-              href="/register"
+            <Link
+              to={"/register"}
               className="text-accent font-semibold transition-colors"
             >
               Register
-            </a>
+            </Link>
           </p>
         </div>
       </div>
