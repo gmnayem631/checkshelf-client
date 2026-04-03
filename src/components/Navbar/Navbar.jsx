@@ -1,9 +1,10 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
 import AuthContext from "../../context/AuthContext";
 
 const Navbar = () => {
+  const { user, signOutUser } = use(AuthContext);
   const links = (
     <>
       <li>
@@ -20,6 +21,10 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogout = () => {
+    signOutUser();
+  };
 
   return (
     <div className={`navbar px-3 max-w-11/12 mx-auto`}>
@@ -61,18 +66,30 @@ const Navbar = () => {
         <ul className={`menu menu-horizontal px-1 text-lg`}>{links}</ul>
       </div>
       <div className="navbar-end flex gap-3">
-        <Link
-          to={"/login"}
-          className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
-        >
-          Login
-        </Link>
-        <Link
-          to={"/register"}
-          className="btn rounded-lg btn-outline border-accent border-2 text-accent hover:bg-accent hover:text-black"
-        >
-          Register
-        </Link>
+        {user ? (
+          <button
+            onClick={handleLogout}
+            className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
+          >
+            Log Out
+          </button>
+        ) : (
+          <>
+            {" "}
+            <Link
+              to={"/login"}
+              className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
+            >
+              Login
+            </Link>
+            <Link
+              to={"/register"}
+              className="btn rounded-lg btn-outline border-accent border-2 text-accent hover:bg-accent hover:text-black"
+            >
+              Register
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
