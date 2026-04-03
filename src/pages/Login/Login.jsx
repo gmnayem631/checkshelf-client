@@ -4,13 +4,23 @@ import { Link } from "react-router";
 import AuthContext from "../../context/AuthContext";
 
 const Login = () => {
-  const { googleLogin } = use(AuthContext);
+  const { googleLogin, signInUser } = use(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+
+    // Sign In User
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result);
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const handleGoogleLogin = () => {
