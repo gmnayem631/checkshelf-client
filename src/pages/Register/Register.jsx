@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import AuthContext from "../../context/AuthContext";
 
 const Register = () => {
-  const { createUser } = use(AuthContext);
+  const { createUser, googleLogin } = use(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +23,13 @@ const Register = () => {
 
   const handleGoogleLogin = () => {
     console.log("Google signup clicked");
+    googleLogin()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

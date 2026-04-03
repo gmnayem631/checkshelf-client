@@ -1,9 +1,11 @@
-import React from "react";
+import React, { use } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router";
 import AuthContext from "../../context/AuthContext";
 
 const Login = () => {
+  const { googleLogin } = use(AuthContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -13,6 +15,13 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     console.log("Google login clicked");
+    googleLogin()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
