@@ -16,10 +16,10 @@ const MainLayout = () => {
 
   return (
     <div>
-      <header className="bg-base-200">
+      <header className="">
         <Navbar />
       </header>
-      <main>
+      <main className="pt-20">
         <Outlet></Outlet>
       </main>
       <footer>

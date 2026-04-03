@@ -8,6 +8,10 @@
   --color-accent: #ebbd67;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply font-serif;
