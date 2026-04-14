@@ -1,9 +1,15 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Mail, Lock, Eye, EyeOff, User } from "lucide-react";
 import { Link } from "react-router";
 import AuthContext from "../../context/AuthContext";
 
 const Register = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPass = () => {
+    setShowPassword(!showPassword);
+  };
+
   const { createUser, googleLogin } = use(AuthContext);
 
   const handleSubmit = (e) => {
@@ -97,17 +103,22 @@ const Register = () => {
                   <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   minLength="6"
                   className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                   placeholder="••••••••"
                 />
                 <button
+                  onClick={handleShowPass}
                   type="button"
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                  className="absolute inset-y-0 right-0 pr-3 cursor-pointer flex items-center text-gray-400 hover:text-gray-600"
                 >
-                  <Eye className="h-5 w-5" />
+                  {showPassword ? (
+                    <EyeOff className="h-5 w-5" />
+                  ) : (
+                    <Eye className="h-5 w-5" />
+                  )}
                 </button>
               </div>
               <p className="mt-1 text-xs text-gray-500">
