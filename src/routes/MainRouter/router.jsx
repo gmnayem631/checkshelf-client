@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router";
+import { Suspense } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import Home from "../../pages/Home/Home";
 import Books from "../../pages/Books/Books";
@@ -11,6 +12,7 @@ import TermsOfUse from "../../pages/TermsOfUse/TermsOfUse";
 import PrivacyPolicy from "../../pages/PrivacyPolicy/PrivacyPolicy";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/books",
-        element: <Books />,
+        loader: () => fetch("http://localhost:3000/books"),
+        element: (
+          <Suspense fallback=<LoadingSpinner />>
+            <Books />,
+          </Suspense>
+        ),
       },
       {
         path: "/courses",

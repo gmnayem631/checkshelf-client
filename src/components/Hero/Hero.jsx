@@ -21,7 +21,7 @@ const Hero = () => {
 
         <p className="max-w-xl text-lg text-gray-200">
           Sharpen your strategy, improve your focus, and grow as a chess player
-          through guided learning, structured courses, and real-game analysis —
+          through guided learning, structured courses, and real-game analysis,
           built for players who want to level up with purpose.
         </p>
 
