@@ -89,7 +89,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to={"/register"}
-                className="btn rounded-lg btn-outline border-accent border-2 text-accent hover:bg-accent hover:text-black"
+                className="btn rounded-lg btn-outline border-2 text-accent hover:bg-accent hover:text-black"
               >
                 Register
               </Link>
