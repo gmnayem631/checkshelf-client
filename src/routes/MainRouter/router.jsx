@@ -34,7 +34,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/courses",
-        element: <Courses />,
+        loader: () => fetch("http://localhost:3000/courses"),
+        element: (
+          <Suspense fallback=<LoadingSpinner />>
+            <Courses />,
+          </Suspense>
+        ),
       },
       {
         path: "/about",
