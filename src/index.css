@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.active {
+  border-bottom: 3px solid #ebbd67;
+}
+
 @layer base {
   body {
     @apply font-serif;

@@ -20,11 +20,11 @@ const BookCard = ({ book }) => {
   return (
     <div className="card bg-gray-50 shadow-md hover:shadow-xl transition duration-300">
       {/* Image */}
-      <figure className="h-56 overflow-hidden">
+      <figure className="h-56 w-56 mx-auto">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </figure>
 
-      <div className="card-body space-y-1">
+      <div className="card-body">
         {/* Title */}
         <h2 className="card-title text-lg font-semibold">{title}</h2>
 
@@ -40,7 +40,7 @@ const BookCard = ({ book }) => {
             {tags?.map((tag, index) => (
               <div
                 key={index}
-                className={`text-sm badge badge-soft border-0 ${
+                className={`text-sm badge badge-xs badge-soft border-0 ${
                   tagColors[tag] || "bg-gray-100 text-gray-700"
                 }`}
               >
@@ -62,12 +62,12 @@ const BookCard = ({ book }) => {
         </div>
 
         {/* Price */}
-        <p className="text-lg font-bold text-[#fefce8]">${price}</p>
+        <p className="text-lg font-bold">${price}</p>
 
         {/* Buttons */}
         <div className="card-actions justify-between mt-3">
           <button className="btn btn-outline btn-accent hover:text-black">
-            Details
+            View Product
           </button>
           <button className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent">
             Add to Cart
