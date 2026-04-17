@@ -1,12 +1,6 @@
-// import React from "react";
-
-// const CourseCard = ({ course }) => {
-//   return <div className="my-10">Course Card</div>;
-// };
-
-// export default CourseCard;
-
+import React from "react";
 import { Link } from "react-router";
+import { Clock, Star, Users } from "lucide-react";
 
 const CourseCard = ({ course }) => {
   const { _id, title, thumbnail, price, level, rating, duration, students } =
@@ -37,14 +31,22 @@ const CourseCard = ({ course }) => {
 
         {/* Meta row */}
         <div className="flex items-center gap-3 text-xs text-base-content/50">
-          <span>⏱ {duration}</span>
+          <span className="flex items-center gap-1">
+            <Clock size={14} className="text-gray-500" />
+            {duration}
+          </span>
           <span>•</span>
-          <span>👥 {students.toLocaleString()} students</span>
+          <span className="flex items-center gap-1">
+            <Users size={14} className="text-gray-500" />
+            {students.toLocaleString()} students
+          </span>
         </div>
 
         {/* Rating */}
         <div className="flex items-center gap-1 text-xs">
-          <span className="text-yellow-400 text-sm">★</span>
+          <span className="text-yellow-400 text-sm">
+            <Star size={14} />
+          </span>
           <span className="font-semibold">{rating}</span>
         </div>
 
