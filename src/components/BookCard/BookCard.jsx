@@ -63,7 +63,7 @@ const BookCard = ({ book }) => {
         </div>
 
         {/* Price */}
-        <p className="text-lg font-bold">${price}</p>
+        <p className="inter text-lg font-bold text-[#5E4B29]">${price}</p>
 
         {/* Buttons */}
         <div className="card-actions justify-between mt-3">

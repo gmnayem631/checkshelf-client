@@ -16,9 +16,6 @@ const Navbar = () => {
       <li>
         <NavLink to={"/courses"}>Courses</NavLink>
       </li>
-      <li>
-        <NavLink to={"/about"}>About Us</NavLink>
-      </li>
       {user && (
         <li>
           <NavLink to={"/dashboard"}>Dashboard</NavLink>

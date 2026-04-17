@@ -19,7 +19,7 @@ const CourseCard = ({ course }) => {
         <img src={thumbnail} alt={title} className="h-auto object-cover" />
         {/* Level pill on image */}
         <span
-          className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full ${levelColor[level] || "bg-gray-100 text-gray-600"}`}
+          className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full ${levelColor[level]}`}
         >
           {level}
         </span>
@@ -52,8 +52,8 @@ const CourseCard = ({ course }) => {
 
         {/* Price + Buttons */}
         <div className="flex items-center justify-between mt-1">
-          <span className="text-lg font-bold text-primary">
-            ${price.toFixed(2)}
+          <span className="inter text-lg font-bold text-[#5E4B29]">
+            ${price}
           </span>
           <div className="flex gap-2">
             <Link
