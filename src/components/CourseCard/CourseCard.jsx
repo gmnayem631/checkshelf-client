@@ -19,7 +19,7 @@ const CourseCard = ({ course }) => {
   };
 
   return (
-    <div className="card bg-base-100 border border-base-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+    <div className="card bg-gray-50 border border-base-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       {/* Thumbnail */}
       <figure className="relative overflow-hidden rounded-t-2xl h-44">
         <img src={thumbnail} alt={title} className="h-auto object-cover" />
@@ -54,10 +54,15 @@ const CourseCard = ({ course }) => {
             ${price.toFixed(2)}
           </span>
           <div className="flex gap-2">
-            <Link to={`/courses/${_id}`} className="btn btn-outline btn-xs">
+            <Link
+              to={`/courses/${_id}`}
+              className="btn btn-outline btn-accent hover:text-black"
+            >
               Details
             </Link>
-            <button className="btn btn-primary btn-xs">Enroll</button>
+            <button className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent">
+              Enroll
+            </button>
           </div>
         </div>
       </div>

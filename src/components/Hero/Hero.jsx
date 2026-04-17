@@ -45,10 +45,17 @@ const Hero = () => {
         {/* Social icons (right side on large screens) */}
         <div className="hidden md:flex flex-col gap-6 absolute right-10 top-1/2 -translate-y-1/2">
           <div className="bg-accent text-black p-3 rounded-full cursor-pointer hover:bg-black hover:text-accent duration-200">
-            <FaGithub size={30} />
+            <a href="https://github.com/gmnayem631" target="_blank">
+              <FaGithub size={30} />
+            </a>
           </div>
           <div className="bg-accent text-black p-3 rounded-full cursor-pointer hover:bg-black hover:text-accent duration-200">
-            <FaLinkedin size={30} />
+            <a
+              href="https://linkedin.com/in/gulam-mustafa-nayem/"
+              target="_blank"
+            >
+              <FaLinkedin size={30} />
+            </a>
           </div>
         </div>
       </div>

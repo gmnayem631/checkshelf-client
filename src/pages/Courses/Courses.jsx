@@ -4,7 +4,7 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 
 const Courses = () => {
   const initialCourses = useLoaderData();
-  console.log(initialCourses);
+
   return (
     <div className="max-w-11/12 mx-auto my-20">
       Explore Chess Courses from Top Teachers

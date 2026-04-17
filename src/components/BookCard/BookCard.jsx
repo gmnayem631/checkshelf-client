@@ -1,8 +1,9 @@
 import React from "react";
 import { StarIcon } from "lucide-react";
+import { Link } from "react-router";
 
 const BookCard = ({ book }) => {
-  const { title, author, price, tags, rating, image, pages, level } = book;
+  const { _id, title, author, price, tags, rating, image, pages, level } = book;
 
   const tagColors = {
     strategy: "bg-blue-100 text-blue-700",
@@ -66,9 +67,12 @@ const BookCard = ({ book }) => {
 
         {/* Buttons */}
         <div className="card-actions justify-between mt-3">
-          <button className="btn btn-outline btn-accent hover:text-black">
+          <Link
+            to={`/books/${_id}`}
+            className="btn btn-outline btn-accent hover:text-black"
+          >
             View Product
-          </button>
+          </Link>
           <button className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent">
             Add to Cart
           </button>

@@ -13,6 +13,8 @@ import PrivacyPolicy from "../../pages/PrivacyPolicy/PrivacyPolicy";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import BookDetails from "../../pages/BookDetails/BookDetails";
+import CourseDetails from "../../pages/CourseDetails/CourseDetails";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/books/:id",
+        element: <BookDetails />,
+      },
+      {
         path: "/courses",
         loader: () => fetch("http://localhost:3000/courses"),
         element: (
@@ -40,6 +46,10 @@ const router = createBrowserRouter([
             <Courses />,
           </Suspense>
         ),
+      },
+      {
+        path: "/courses/:id",
+        element: <CourseDetails />,
       },
       {
         path: "/about",
