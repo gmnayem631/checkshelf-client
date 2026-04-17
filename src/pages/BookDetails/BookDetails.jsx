@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { Chessboard } from "react-chessboard";
 import { Link, useLoaderData } from "react-router";
 
 const tagColors = {
@@ -27,6 +28,19 @@ const BookDetails = () => {
     pages,
     chessPosition,
   } = book;
+  console.log(chessPosition);
+
+  const chessBoardOptions = {
+    position: chessPosition.fen,
+    boardWidth: 560,
+    arePiecesDraggable: false,
+    boardOrientation: "white",
+
+    customBoardStyle: {
+      borderRadius: "8px",
+      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
+    },
+  };
 
   return (
     <div className="min-h-screen bg-[#fefce8]">
@@ -47,20 +61,6 @@ const BookDetails = () => {
                 alt={title}
                 className="relative w-72 h-96 object-cover rounded-xl shadow-lg z-10"
               />
-            </div>
-
-            {/* Chess position */}
-            <div className="w-72 border-2 border-dashed border-neutral/30 rounded-xl p-4 text-center bg-white/60">
-              <p className="text-xs text-neutral/40 font-mono uppercase tracking-widest mb-2">
-                Position from this book
-              </p>
-              {/* ♟ You'll drop react-chessboard here */}
-              <div className="h-64 bg-neutral/5 rounded-lg flex items-center justify-center">
-                <span className="text-4xl">♟</span>
-              </div>
-              <p className="text-xs text-neutral/50 mt-2 italic">
-                {chessPosition?.caption}
-              </p>
             </div>
           </div>
 
@@ -145,6 +145,18 @@ const BookDetails = () => {
               </div>
             </div>
           </div>
+        </div>
+        {/* Chess position */}
+        <div className="w-[600px] mx-auto mt-16 border-2 border-dashed border-neutral/30 rounded-xl p-4 text-center bg-white/60">
+          <p className="text-lg font-bold text-neutral/40 font-mono uppercase tracking-widest mb-2">
+            A key position from this book
+          </p>
+
+          <Chessboard options={chessBoardOptions} />
+
+          <p className="text-sm text-neutral/50 mt-2 italic">
+            {chessPosition.caption}
+          </p>
         </div>
       </div>
     </div>
