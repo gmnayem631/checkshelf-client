@@ -24,14 +24,14 @@ const CourseDetails = () => {
   };
 
   return (
-    <div className="my-10">
+    <div className="mb-10">
       {/* Breadcrumb */}
-      <div className="bg-neutral mb-9 text-neutral-content py-4 px-6 text-xs tracking-widest uppercase font-mono text-center opacity-70">
+      <div className="bg-neutral text-neutral-content py-4 px-6 text-xs tracking-widest uppercase font-mono text-center opacity-70">
         <Link to={"/"}>CheckShelf</Link> &nbsp;/&nbsp;
         <Link to={"/courses"}>Courses</Link> &nbsp;/&nbsp; {title}
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-10 max-w-11/12 mx-auto px-4">
+      <div className="grid lg:grid-cols-3 gap-10 max-w-11/12 mx-auto px-4 py-16">
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2 space-y-8">
           {/* Thumbnail */}

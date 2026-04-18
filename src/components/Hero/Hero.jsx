@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
 import heroBg from "../../assets/hero-bg-1.jpg";
+import { AuthContext } from "../../context/AuthContext";
 
 const Hero = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <section
       className="text-white py-36 px-5 relative bg-cover bg-center bg-no-repeat"

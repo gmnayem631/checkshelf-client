@@ -44,7 +44,7 @@ const BookDetails = () => {
 
   return (
     <div className="min-h-screen bg-[#fefce8]">
-      {/* Hero Strip */}
+      {/* Breadcrumb */}
       <div className="bg-neutral text-neutral-content py-4 px-6 text-xs tracking-widest uppercase font-mono text-center opacity-70">
         <Link to={"/"}>CheckShelf</Link> &nbsp;/&nbsp;{" "}
         <Link to={"/books"}>Books</Link> &nbsp;/&nbsp; {title}
@@ -106,14 +106,16 @@ const BookDetails = () => {
                 <span className="inter text-xs uppercase tracking-widest font-mono opacity-50">
                   Stock
                 </span>
-                <span className="font-bold text-base text-emerald-600">
+                <span className="inter font-bold text-base text-emerald-600">
                   {stock} left
                 </span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-neutral/70 leading-relaxed ">{description}</p>
+            <p className="text-neutral/70 leading-relaxed text-lg font-semibold">
+              {description}
+            </p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
@@ -146,6 +148,7 @@ const BookDetails = () => {
             </div>
           </div>
         </div>
+
         {/* Chess position */}
         <div className="w-[600px] mx-auto mt-16 border-2 border-dashed border-neutral/30 rounded-xl p-4 text-center bg-white/60">
           <p className="text-lg font-bold text-neutral/40 font-mono uppercase tracking-widest mb-2">
