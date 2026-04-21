@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import { Clock, Users, Star, Award, PlayCircle, BookOpen } from "lucide-react";
 
 const CourseDetails = () => {
   const course = useLoaderData();
+  const [instructor, setInstructor] = useState(null);
 
   const {
+    instructorId,
     title,
     thumbnail,
     price,
@@ -14,8 +16,22 @@ const CourseDetails = () => {
     rating,
     duration,
     students,
-    instructorName,
   } = course;
+
+  useEffect(() => {
+    if (!instructorId) {
+      return;
+    } else {
+      fetch(`http://localhost:3000/instructors/${instructorId}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setInstructor(data);
+        })
+        .catch((error) => {
+          console.log("failed to fetch", error);
+        });
+    }
+  }, [instructorId]);
 
   const levelColor = {
     Beginner: "bg-emerald-100 text-emerald-700",
@@ -78,11 +94,12 @@ const CourseDetails = () => {
           {/* Instructor */}
           <div className="flex items-center gap-4 pb-6">
             <div className="w-14 h-14 bg-[#5E4B29] text-white rounded-full flex items-center justify-center font-bold text-xl">
-              GM
+              {instructor?.instructorTitle}
             </div>
             <div>
-              <p className="font-semibold text-lg">Instructor</p>
-              <p className="text-[#5E4B29]">{instructorName}</p>
+              <p className="text-[#5E4B29] text-lg font-bold">
+                {instructor?.name}
+              </p>
             </div>
           </div>
         </div>
