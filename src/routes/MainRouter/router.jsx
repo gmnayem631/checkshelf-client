@@ -15,6 +15,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import BookDetails from "../../pages/BookDetails/BookDetails";
 import CourseDetails from "../../pages/CourseDetails/CourseDetails";
+import InstructorDetails from "../../pages/InstructorDetails/InstructorDetails";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,12 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:3000/courses/${params.id}`),
         element: <CourseDetails />,
+      },
+      {
+        path: "/instructors/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/instructors/${params.id}`),
+        element: <InstructorDetails />,
       },
       {
         path: "/about",

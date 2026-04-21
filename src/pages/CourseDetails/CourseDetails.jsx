@@ -97,8 +97,10 @@ const CourseDetails = () => {
               {instructor?.instructorTitle}
             </div>
             <div>
-              <p className="text-[#5E4B29] text-lg font-bold">
-                {instructor?.name}
+              <p className="text-[#7d6947] hover:text-[#5E4B29] text-lg font-bold">
+                <Link to={`/instructors/${instructorId}`}>
+                  {instructor?.name}
+                </Link>
               </p>
             </div>
           </div>
