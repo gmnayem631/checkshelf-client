@@ -1,11 +1,14 @@
 import React, { use, useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { googleLogin, signInUser } = use(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleShowPass = () => {
     setShowPassword(!showPassword);
@@ -22,6 +25,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         e.target.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
@@ -32,6 +36,7 @@ const Login = () => {
     googleLogin()
       .then((result) => {
         console.log(result);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
