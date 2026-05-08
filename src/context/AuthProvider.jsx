@@ -12,6 +12,7 @@ import auth from "../firebase/firebase.init";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   // Google Provider
   const googleProvider = new GoogleAuthProvider();
 
@@ -38,13 +39,21 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unsubscribe();
     };
   }, []);
 
-  const userInfo = { user, createUser, signInUser, googleLogin, signOutUser };
+  const userInfo = {
+    user,
+    loading,
+    createUser,
+    signInUser,
+    googleLogin,
+    signOutUser,
+  };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 };
 

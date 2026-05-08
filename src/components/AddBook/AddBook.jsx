@@ -38,7 +38,7 @@ const AddBook = () => {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-10">
-        {/* ================= BASIC INFO ================= */}
+        {/* Basic Info */}
         <div className="bg-white shadow-md rounded-3xl p-8 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-[#5E4B29]">
@@ -143,7 +143,7 @@ const AddBook = () => {
           </div>
         </div>
 
-        {/* ================= CLASSIFICATION ================= */}
+        {/* Classification */}
         <div className="bg-white shadow-md rounded-3xl p-8 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-[#5E4B29]">
@@ -193,7 +193,7 @@ const AddBook = () => {
           </div>
         </div>
 
-        {/* ================= DESCRIPTION ================= */}
+        {/* Description */}
         <div className="bg-white shadow-md rounded-3xl p-8 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-[#5E4B29]">
@@ -212,7 +212,7 @@ const AddBook = () => {
           ></textarea>
         </div>
 
-        {/* ================= MEDIA ================= */}
+        {/* Media */}
         <div className="bg-white shadow-md rounded-3xl p-8 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-[#5E4B29]">Media</h2>
@@ -229,11 +229,11 @@ const AddBook = () => {
           />
         </div>
 
-        {/* ================= CHESS POSITION ================= */}
+        {/* Chess Position */}
         <div className="bg-white shadow-md rounded-3xl p-8 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-[#5E4B29]">
-              Chess Position (Optional)
+              Chess Position
             </h2>
 
             <p className="text-sm text-gray-500">
@@ -248,7 +248,7 @@ const AddBook = () => {
             </label>
 
             <textarea
-              rows={3}
+              rows={1}
               placeholder="r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 3"
               className="textarea textarea-bordered w-full rounded-2xl"
             ></textarea>
@@ -272,7 +272,7 @@ const AddBook = () => {
           </div>
         </div>
 
-        {/* ================= SUBMIT ================= */}
+        {/* Submit button */}
         <div className="flex justify-end">
           <button className="btn bg-accent hover:bg-black text-black hover:text-accent px-10 rounded-2xl h-14 text-base">
             Add Book
