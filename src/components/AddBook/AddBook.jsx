@@ -16,13 +16,51 @@ const AddBook = () => {
   ];
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("Your books is added successfully!", {
+    const form = e.target;
+    const formData = new FormData(form);
+    // taking data from the form
+    const {
+      title,
+      author,
+      caption,
+      price,
+      description,
+      pages,
+      stock,
+      image,
+      fen,
+      rating,
+      level,
+    } = Object.fromEntries(formData.entries());
+    const tags = formData.getAll("tags");
+
+    const bookData = {
+      title,
+      author,
+      price: parseFloat(price),
+      tags,
+      level,
+      description,
+      image,
+      rating: parseFloat(rating),
+      stock: parseInt(stock),
+      pages: parseInt(pages),
+      chessPosition: {
+        fen,
+        caption,
+      },
+    };
+
+    console.log(bookData);
+
+    toast.success("Book added successfully!", {
       style: {
         borderRadius: "10px",
         background: "#333",
         color: "#fff",
       },
     });
+    form.reset();
   };
 
   return (
@@ -58,6 +96,7 @@ const AddBook = () => {
 
               <input
                 type="text"
+                name="title"
                 placeholder="My System"
                 className="input input-bordered w-full rounded-xl focus:outline-none"
               />
@@ -71,6 +110,7 @@ const AddBook = () => {
 
               <input
                 type="text"
+                name="author"
                 placeholder="Aron Nimzowitsch"
                 className="input input-bordered w-full rounded-xl focus:outline-none"
               />
@@ -84,6 +124,7 @@ const AddBook = () => {
 
               <input
                 type="number"
+                name="price"
                 step="0.01"
                 placeholder="15.99"
                 className="input input-bordered w-full rounded-xl"
@@ -98,6 +139,7 @@ const AddBook = () => {
 
               <input
                 type="number"
+                name="pages"
                 placeholder="376"
                 className="input input-bordered w-full rounded-xl"
               />
@@ -111,6 +153,7 @@ const AddBook = () => {
 
               <input
                 type="number"
+                name="stock"
                 placeholder="10"
                 className="input input-bordered w-full rounded-xl"
               />
@@ -122,7 +165,10 @@ const AddBook = () => {
                 <span className="label-text font-medium">Rating</span>
               </label>
 
-              <select className="select select-bordered w-full rounded-xl">
+              <select
+                name="rating"
+                className="select select-bordered w-full rounded-xl"
+              >
                 <option disabled selected>
                   Select rating
                 </option>
@@ -161,7 +207,10 @@ const AddBook = () => {
               <span className="label-text font-medium">Level</span>
             </label>
 
-            <select className="select select-bordered w-full rounded-xl">
+            <select
+              name="level"
+              className="select select-bordered w-full rounded-xl"
+            >
               <option disabled selected>
                 Select difficulty level
               </option>
@@ -184,7 +233,12 @@ const AddBook = () => {
                   key={tag}
                   className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 cursor-pointer hover:border-[#5E4B29] transition"
                 >
-                  <input type="checkbox" className="checkbox checkbox-sm" />
+                  <input
+                    type="checkbox"
+                    value={tag}
+                    name="tags"
+                    className="checkbox checkbox-sm"
+                  />
 
                   <span className="capitalize text-sm">{tag}</span>
                 </label>
@@ -206,7 +260,8 @@ const AddBook = () => {
           </div>
 
           <textarea
-            rows={6}
+            rows={1}
+            name="description"
             placeholder="Write a detailed description..."
             className="textarea textarea-bordered w-full rounded-2xl"
           ></textarea>
@@ -224,6 +279,7 @@ const AddBook = () => {
 
           <input
             type="url"
+            name="image"
             placeholder="https://example.com/book-cover.jpg"
             className="input input-bordered w-full rounded-xl"
           />
@@ -249,6 +305,7 @@ const AddBook = () => {
 
             <textarea
               rows={1}
+              name="fen"
               placeholder="r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 3"
               className="textarea textarea-bordered w-full rounded-2xl"
             ></textarea>
@@ -266,6 +323,7 @@ const AddBook = () => {
 
             <input
               type="text"
+              name="caption"
               placeholder="Control of the center and rapid development"
               className="input input-bordered w-full rounded-xl"
             />
