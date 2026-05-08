@@ -16,6 +16,7 @@ import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import BookDetails from "../../pages/BookDetails/BookDetails";
 import CourseDetails from "../../pages/CourseDetails/CourseDetails";
 import InstructorDetails from "../../pages/InstructorDetails/InstructorDetails";
+import AddBook from "../../components/AddBook/AddBook";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Dashboard />,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/addBook",
+        element: (
+          <PrivateRoute>
+            <AddBook />,
           </PrivateRoute>
         ),
       },
