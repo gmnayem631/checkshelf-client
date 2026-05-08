@@ -53,6 +53,19 @@ const AddBook = () => {
 
     console.log(bookData);
 
+    // sending book data to backend
+    fetch("http://localhost:3000/books", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(bookData),
+    })
+      .then((result) => {
+        console.log(result);
+      })
+      .then((data) => {
+        console.log(data);
+      });
+
     toast.success("Book added successfully!", {
       style: {
         borderRadius: "10px",
