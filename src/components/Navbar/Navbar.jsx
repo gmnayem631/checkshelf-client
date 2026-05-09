@@ -6,7 +6,6 @@ import { CartContext } from "../../context/CartContext/CartContext";
 
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
-  const { cartCount } = use(CartContext);
 
   const links = (
     <>
@@ -22,7 +21,7 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <NavLink to={"/dashboard"}>Dashboard {cartCount}</NavLink>
+            <NavLink to={"/dashboard"}>Dashboard</NavLink>
           </li>
           <li>
             <NavLink to={"/addBook"}>Add Book</NavLink>
@@ -100,10 +99,7 @@ const Navbar = () => {
                 </li>
                 <div className="divider my-0"></div>
                 <li>
-                  <Link
-                    to="/my-cart"
-                    className="flex justify-between text-base"
-                  >
+                  <Link to="/myCart" className="flex justify-between text-base">
                     My Cart
                   </Link>
                 </li>

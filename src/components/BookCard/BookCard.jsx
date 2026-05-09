@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { StarIcon } from "lucide-react";
 import { Link } from "react-router";
 import { CartContext } from "../../context/CartContext/CartContext";
+import toast from "react-hot-toast";
 
 const BookCard = ({ book }) => {
   const { _id, title, author, price, tags, rating, image, pages, level } = book;
@@ -17,6 +18,17 @@ const BookCard = ({ book }) => {
     openings: "bg-pink-100 text-pink-700",
     attack: "bg-orange-100 text-orange-700",
     beginner: "bg-lime-100 text-lime-700",
+  };
+
+  const handleAddToCart = () => {
+    addToCart(book);
+    toast.success("Added to cart successfully!", {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
   };
 
   return (
@@ -75,7 +87,7 @@ const BookCard = ({ book }) => {
             View Product
           </Link>
           <button
-            onClick={() => addToCart(book)}
+            onClick={handleAddToCart}
             className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
           >
             Add to Cart

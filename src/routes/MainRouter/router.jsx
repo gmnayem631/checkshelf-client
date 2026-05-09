@@ -17,6 +17,7 @@ import BookDetails from "../../pages/BookDetails/BookDetails";
 import CourseDetails from "../../pages/CourseDetails/CourseDetails";
 import InstructorDetails from "../../pages/InstructorDetails/InstructorDetails";
 import AddBook from "../../components/AddBook/AddBook";
+import MyCart from "../../pages/MyCart/MyCart";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddBook />,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myCart",
+        element: (
+          <PrivateRoute>
+            <MyCart />,
           </PrivateRoute>
         ),
       },
