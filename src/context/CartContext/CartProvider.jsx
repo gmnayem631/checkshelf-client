@@ -5,6 +5,7 @@ import {
   addToStoredCart,
   removeFromStoredCart,
   deleteStoredCart,
+  decreaseQuantityInStoredCart,
 } from "../../utils/cartStorage";
 
 const CartProvider = ({ children }) => {
@@ -28,6 +29,12 @@ const CartProvider = ({ children }) => {
     setCart([]);
   };
 
+  // decrease item quantity
+  const decreaseQuantity = (id) => {
+    const updatedCart = decreaseQuantityInStoredCart(id);
+    setCart([...updatedCart]);
+  };
+
   //   items counter
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cart.reduce(
@@ -40,6 +47,7 @@ const CartProvider = ({ children }) => {
     addToCart,
     removeFromCart,
     clearCart,
+    decreaseQuantity,
     cartCount,
     totalPrice,
   };

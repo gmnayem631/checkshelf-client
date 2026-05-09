@@ -1,10 +1,17 @@
 import React, { use } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import { Link } from "react-router";
+import { X } from "lucide-react";
 
 const MyCart = () => {
-  const { cart, removeFromCart, addToCart, totalPrice, clearCart } =
-    use(CartContext);
+  const {
+    cart,
+    removeFromCart,
+    addToCart,
+    totalPrice,
+    clearCart,
+    decreaseQuantity,
+  } = use(CartContext);
 
   if (cart.length === 0) {
     return (
@@ -40,6 +47,16 @@ const MyCart = () => {
                 </td>
                 <td>${item.price}</td>
                 <td className="flex items-center gap-2">
+                  {/* Decrease Button */}
+                  <button
+                    className="btn btn-xs btn-outline"
+                    onClick={() => decreaseQuantity(item._id)}
+                  >
+                    {" "}
+                    -{" "}
+                  </button>
+                  <span className="font-medium">{item.quantity}</span>
+                  {/* increase button */}
                   <button
                     className="btn btn-xs btn-outline"
                     onClick={() => addToCart(item)}
@@ -47,7 +64,6 @@ const MyCart = () => {
                     {" "}
                     +{" "}
                   </button>
-                  <span className="font-medium">{item.quantity}</span>
                 </td>
                 <td>${(item.price * item.quantity).toFixed(2)}</td>
                 <td>
@@ -55,7 +71,7 @@ const MyCart = () => {
                     onClick={() => removeFromCart(item._id)}
                     className="btn btn-ghost btn-sm text-red-500 text-center"
                   >
-                    Remove
+                    <X size={32} />
                   </button>
                 </td>
               </tr>
@@ -66,9 +82,8 @@ const MyCart = () => {
 
       {/* The Summary Section */}
       <div className="mt-8 flex flex-col items-end gap-4">
-        <div className="text-xl font-bold inter">
-          Total Amount:{" "}
-          <span className="text-accent">${totalPrice.toFixed(2)}</span>
+        <div className="text-xl font-bold inter text-[#5E4B29]">
+          Total Amount: ${totalPrice.toFixed(2)}
         </div>
         <div className="flex gap-4">
           <button onClick={clearCart} className="btn btn-outline btn-error">

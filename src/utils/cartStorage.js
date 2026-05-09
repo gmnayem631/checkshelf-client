@@ -31,6 +31,21 @@ const addToStoredCart = (book) => {
   return cart;
 };
 
+// decrease the quantity
+const decreaseQuantityInStoredCart = (id) => {
+  let cart = getStoredCart();
+  const item = cart.find((item) => item._id === id);
+
+  if (item && item.quantity > 1) {
+    item.quantity -= 1;
+  } else {
+    item.quantity = 1;
+  }
+
+  saveCartToStorage(cart);
+  return cart;
+};
+
 // remove a specific item
 const removeFromStoredCart = (id) => {
   const cart = getStoredCart();
@@ -49,4 +64,5 @@ export {
   addToStoredCart,
   removeFromStoredCart,
   deleteStoredCart,
+  decreaseQuantityInStoredCart,
 };
