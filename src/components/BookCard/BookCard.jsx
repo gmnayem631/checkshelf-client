@@ -1,7 +1,6 @@
 import React, { use } from "react";
 import { StarIcon } from "lucide-react";
 import { Link } from "react-router";
-import { addToStoredCart } from "../../utils/cartStorage";
 import { CartContext } from "../../context/CartContext/CartContext";
 
 const BookCard = ({ book }) => {

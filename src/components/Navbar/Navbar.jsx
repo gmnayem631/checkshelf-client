@@ -78,12 +78,45 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex gap-3">
           {user ? (
-            <button
-              onClick={handleLogout}
-              className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
-            >
-              Log Out
-            </button>
+            <div className="dropdown dropdown-end">
+              {/* 1. The Circular Avatar Button */}
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar placeholder bg-accent text-black font-bold text-xl uppercase"
+              >
+                <span>
+                  {user?.displayName ? user.displayName[0] : user?.email[0]}
+                </span>
+              </div>
+
+              {/* 2. The Dropdown Content */}
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-auto border border-accent/20"
+              >
+                <li className="px-4 py-2 font-semibold text-gray-500 truncate">
+                  {user?.email}
+                </li>
+                <div className="divider my-0"></div>
+                <li>
+                  <Link
+                    to="/my-cart"
+                    className="flex justify-between text-base"
+                  >
+                    My Cart
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={handleLogout}
+                    className="text-red-500 hover:bg-red-50 text-base"
+                  >
+                    Log Out
+                  </button>
+                </li>
+              </ul>
+            </div>
           ) : (
             <>
               <Link
