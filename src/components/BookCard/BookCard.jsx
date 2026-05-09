@@ -1,10 +1,12 @@
-import React from "react";
+import React, { use } from "react";
 import { StarIcon } from "lucide-react";
 import { Link } from "react-router";
+import { addToStoredCart } from "../../utils/cartStorage";
+import { CartContext } from "../../context/CartContext/CartContext";
 
 const BookCard = ({ book }) => {
   const { _id, title, author, price, tags, rating, image, pages, level } = book;
-
+  const { addToCart } = use(CartContext);
   const tagColors = {
     strategy: "bg-blue-100 text-blue-700",
     positional: "bg-indigo-100 text-indigo-700",
@@ -73,7 +75,10 @@ const BookCard = ({ book }) => {
           >
             View Product
           </Link>
-          <button className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent">
+          <button
+            onClick={() => addToCart(book)}
+            className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
+          >
             Add to Cart
           </button>
         </div>

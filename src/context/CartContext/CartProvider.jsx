@@ -5,7 +5,7 @@ import {
   addToStoredCart,
   removeFromStoredCart,
   deleteStoredCart,
-} from "../utils/cartStorage";
+} from "../../utils/cartStorage";
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(getStoredCart());
@@ -28,6 +28,7 @@ const CartProvider = ({ children }) => {
     setCart([]);
   };
 
+  //   items counter
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -43,9 +44,7 @@ const CartProvider = ({ children }) => {
     totalPrice,
   };
 
-  return (
-    <CartContext.Provider value={cartInfo}>{children}</CartContext.Provider>
-  );
+  return <CartContext value={cartInfo}>{children}</CartContext>;
 };
 
 export default CartProvider;

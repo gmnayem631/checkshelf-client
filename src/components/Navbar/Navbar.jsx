@@ -2,9 +2,12 @@ import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
 import { AuthContext } from "../../context/AuthContext";
+import { CartContext } from "../../context/CartContext/CartContext";
 
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
+  const { cartCount } = use(CartContext);
+
   const links = (
     <>
       <li>
@@ -19,7 +22,7 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <NavLink to={"/dashboard"}>Dashboard</NavLink>
+            <NavLink to={"/dashboard"}>Dashboard {cartCount}</NavLink>
           </li>
           <li>
             <NavLink to={"/addBook"}>Add Book</NavLink>
