@@ -15,6 +15,7 @@ const AIAssistant = () => {
   const handleRecommend = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setRecommendations([]); // ✅ Clear previous results
     try {
       const res = await fetch("http://localhost:3000/aiRecommendation", {
         method: "POST",
@@ -26,23 +27,28 @@ const AIAssistant = () => {
         toast.error(
           "The Grandmaster is busy. Please try again in 30 seconds!",
           {
-            style: {
-              borderRadius: "10px",
-              background: "#333",
-              color: "#fff",
-            },
+            style: { borderRadius: "10px", background: "#333", color: "#fff" },
           },
         );
         setLoading(false);
         return;
       }
+
+      if (res.status === 404) {
+        // ✅ New
+        toast.error(
+          "No books found for your criteria. Try a different topic or level!",
+          {
+            style: { borderRadius: "10px", background: "#333", color: "#fff" },
+          },
+        );
+        setLoading(false);
+        return;
+      }
+
       if (res.status === 500) {
         toast.error("Failed to process request", {
-          style: {
-            borderRadius: "10px",
-            background: "#333",
-            color: "#fff",
-          },
+          style: { borderRadius: "10px", background: "#333", color: "#fff" },
         });
         setLoading(false);
         return;
