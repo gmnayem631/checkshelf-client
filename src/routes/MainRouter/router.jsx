@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:3000/books"),
         element: (
           <Suspense fallback=<LoadingSpinner />>
-            <Books />,
+            <Books />
           </Suspense>
         ),
       },
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:3000/courses"),
         element: (
           <Suspense fallback=<LoadingSpinner />>
-            <Courses />,
+            <Courses />
           </Suspense>
         ),
       },
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: (
           <PrivateRoute>
-            <Dashboard />,
+            <Dashboard />
           </PrivateRoute>
         ),
       },
@@ -85,7 +85,7 @@ const router = createBrowserRouter([
         path: "/addBook",
         element: (
           <PrivateRoute>
-            <AddBook />,
+            <AddBook />
           </PrivateRoute>
         ),
       },
@@ -93,7 +93,7 @@ const router = createBrowserRouter([
         path: "/myCart",
         element: (
           <PrivateRoute>
-            <MyCart />,
+            <MyCart />
           </PrivateRoute>
         ),
       },

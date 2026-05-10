@@ -1,12 +1,15 @@
 import React, { use } from "react";
 import { StarIcon } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { CartContext } from "../../context/CartContext/CartContext";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../context/AuthContext";
 
 const BookCard = ({ book }) => {
   const { _id, title, author, price, tags, rating, image, pages, level } = book;
   const { addToCart } = use(CartContext);
+  const { user } = use(AuthContext);
+  const navigate = useNavigate();
   const tagColors = {
     strategy: "bg-blue-100 text-blue-700",
     positional: "bg-indigo-100 text-indigo-700",
@@ -21,6 +24,10 @@ const BookCard = ({ book }) => {
   };
 
   const handleAddToCart = () => {
+    if (!user) {
+      navigate("/login");
+      return;
+    }
     addToCart(book);
     toast.success("Added to cart successfully!", {
       style: {
