@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BookCard from "../../components/BookCard/BookCard";
 import { Sparkles, BrainCircuit } from "lucide-react";
+import toast from "react-hot-toast";
 
 const AIAssistant = () => {
   const [loading, setLoading] = useState(false);
@@ -14,23 +15,48 @@ const AIAssistant = () => {
   const handleRecommend = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setRecommendations([]);
-
     try {
       const res = await fetch("http://localhost:3000/aiRecommendation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
+      if (res.status === 429) {
+        toast.error(
+          "The Grandmaster is busy. Please try again in 30 seconds!",
+          {
+            style: {
+              borderRadius: "10px",
+              background: "#333",
+              color: "#fff",
+            },
+          },
+        );
+        setLoading(false);
+        return;
+      }
+      if (res.status === 500) {
+        toast.error("Failed to process request", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+        setLoading(false);
+        return;
+      }
+
       const data = await res.json();
       setRecommendations(data);
     } catch (error) {
-      console.error("Error fetching AI recommendations:", error);
+      console.log(error);
+      toast.error("Something went wrong with the connection.");
     } finally {
       setLoading(false);
     }
   };
-
   return (
     <div className="max-w-11/12 mx-auto px-4 pt-28 pb-20 min-h-screen">
       {/* Header Section */}
