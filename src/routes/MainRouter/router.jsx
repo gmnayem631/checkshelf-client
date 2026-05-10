@@ -18,6 +18,7 @@ import CourseDetails from "../../pages/CourseDetails/CourseDetails";
 import InstructorDetails from "../../pages/InstructorDetails/InstructorDetails";
 import AddBook from "../../components/AddBook/AddBook";
 import MyCart from "../../pages/MyCart/MyCart";
+import AIAssistant from "../../pages/AIAssistant/AIAssistant";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/aiRecommendation",
+        element: <AIAssistant />,
       },
       {
         path: "/dashboard",

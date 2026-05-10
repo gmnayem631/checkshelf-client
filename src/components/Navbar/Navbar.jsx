@@ -18,6 +18,10 @@ const Navbar = () => {
       <li>
         <NavLink to={"/courses"}>Courses</NavLink>
       </li>
+      <li>
+        <NavLink to={"/aiRecommendation"}>AI Assistant</NavLink>
+      </li>
+
       {user && (
         <>
           <li>
