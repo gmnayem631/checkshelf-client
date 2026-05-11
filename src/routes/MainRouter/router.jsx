@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/books",
-        loader: () => fetch("http://localhost:3000/books"),
+        loader: () => fetch("https://checkshelf-server.vercel.app/books"),
         element: (
           <Suspense fallback=<LoadingSpinner />>
             <Books />
@@ -41,12 +41,12 @@ const router = createBrowserRouter([
       {
         path: "/books/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/books/${params.id}`),
+          fetch(`https://checkshelf-server.vercel.app/books/${params.id}`),
         element: <BookDetails />,
       },
       {
         path: "/courses",
-        loader: () => fetch("http://localhost:3000/courses"),
+        loader: () => fetch("https://checkshelf-server.vercel.app/courses"),
         element: (
           <Suspense fallback=<LoadingSpinner />>
             <Courses />
@@ -56,13 +56,15 @@ const router = createBrowserRouter([
       {
         path: "/courses/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/courses/${params.id}`),
+          fetch(`https://checkshelf-server.vercel.app/courses/${params.id}`),
         element: <CourseDetails />,
       },
       {
         path: "/instructors/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/instructors/${params.id}`),
+          fetch(
+            `https://checkshelf-server.vercel.app/instructors/${params.id}`,
+          ),
         element: <InstructorDetails />,
       },
       {

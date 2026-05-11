@@ -54,7 +54,7 @@ const AddBook = () => {
     console.log(bookData);
 
     // sending book data to backend
-    fetch("http://localhost:3000/books", {
+    fetch("https://checkshelf-server.vercel.app/books", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(bookData),

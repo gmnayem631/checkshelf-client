@@ -22,7 +22,7 @@ const CourseDetails = () => {
     if (!instructorId) {
       return;
     } else {
-      fetch(`http://localhost:3000/instructors/${instructorId}`)
+      fetch(`https://checkshelf-server.vercel.app/instructors/${instructorId}`)
         .then((res) => res.json())
         .then((data) => {
           setInstructor(data);

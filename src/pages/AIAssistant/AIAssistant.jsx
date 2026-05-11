@@ -17,11 +17,14 @@ const AIAssistant = () => {
     setLoading(true);
     setRecommendations([]); // ✅ Clear previous results
     try {
-      const res = await fetch("http://localhost:3000/aiRecommendation", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://checkshelf-server.vercel.app/aiRecommendation",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        },
+      );
 
       if (res.status === 429) {
         toast.error(
