@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-white/50 backdrop-blur-xl">
-      <div className={"navbar px-3 max-w-11/12 mx-auto"}>
+      <div className={"navbar max-w-11/12 mx-auto"}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,18 +62,19 @@ const Navbar = () => {
               </svg>
             </div>
             <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              tabIndex="0"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 shadow-lg border border-base-200"
             >
               {links}
             </ul>
           </div>
-          <Link
-            to={"/"}
-            className={"flex justify-center items-center font-bold text-xl"}
-          >
-            <img src={logo} alt="" className="h-16" />
-            CheckShelf
+
+          {/* Brand name and logo */}
+          <Link to={"/"} className={"flex gap-1 items-center font-bold"}>
+            <img src={logo} alt="" className="h-12 sm:h-16" />
+            <span className="md:text-xl hidden xs:inline sm:inline">
+              CheckShelf
+            </span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -82,7 +83,7 @@ const Navbar = () => {
         <div className="navbar-end flex gap-3">
           {user ? (
             <div className="dropdown dropdown-end">
-              {/* 1. The Circular Avatar Button */}
+              {/* Avatar Button */}
               <div
                 tabIndex={0}
                 role="button"
@@ -93,7 +94,7 @@ const Navbar = () => {
                 </span>
               </div>
 
-              {/* 2. The Dropdown Content */}
+              {/* The Dropdown Content */}
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-auto border border-accent/20"
@@ -121,13 +122,13 @@ const Navbar = () => {
             <>
               <Link
                 to={"/login"}
-                className="btn rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
+                className="btn btn-sm sm:btn-md rounded-lg bg-accent border-none hover:bg-black hover:text-accent"
               >
                 Login
               </Link>
               <Link
                 to={"/register"}
-                className="btn rounded-lg btn-outline border-2 text-accent hover:bg-accent hover:text-black"
+                className="btn btn-sm sm:btn-md rounded-lg btn-outline border-2 text-accent hover:bg-accent hover:text-black"
               >
                 Register
               </Link>

@@ -1,9 +1,19 @@
 import React from "react";
 import { Link } from "react-router";
+import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+      <nav>
+        <Link to={"/"} className="flex gap-1 items-center font-bold">
+          <img src={logo} alt="CheckShelf logo" className="h-12 sm:h-16" />
+          <span className="text-xl">CheckShelf</span>
+        </Link>
+        <p className="text-sm text-base-content/60 max-w-40">
+          Train your mind. Master the game.
+        </p>
+      </nav>
       <nav>
         <h6 className="footer-title">Services</h6>
         <a className="link link-hover">Courses</a>
