@@ -17,7 +17,7 @@ const Register = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, email, password);
+
     createUser(email, password)
       .then((result) => {
         console.log(result);
@@ -28,7 +28,6 @@ const Register = () => {
   };
 
   const handleGoogleLogin = () => {
-    console.log("Google signup clicked");
     googleLogin()
       .then((result) => {
         console.log(result);

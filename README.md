@@ -4,7 +4,7 @@ A full-stack chess bookstore with an AI-powered recommendation engine. Users can
 
 Live: [CheckShelf](https://checkshelf.netlify.app)
 
-[Frontend](https://github.com/gmnayem631/checkshelf-client) | [Backend API](https://checkshelf-server.vercel.app)
+[Frontend](https://github.com/gmnayem631/checkshelf-client) | [Backend](https://github.com/gmnayem631/checkshelf-server)
 
 ---
 

@@ -24,9 +24,9 @@ const Navbar = () => {
 
       {user && (
         <>
-          <li>
+          {/* <li>
             <NavLink to={"/dashboard"}>Dashboard</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to={"/addBook"}>Add Book</NavLink>
           </li>

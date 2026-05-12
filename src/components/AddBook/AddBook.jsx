@@ -51,8 +51,6 @@ const AddBook = () => {
       },
     };
 
-    console.log(bookData);
-
     // sending book data to backend
     fetch("https://checkshelf-server.vercel.app/books", {
       method: "POST",

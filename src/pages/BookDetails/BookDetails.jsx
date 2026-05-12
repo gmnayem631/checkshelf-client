@@ -28,7 +28,6 @@ const BookDetails = () => {
     pages,
     chessPosition,
   } = book;
-  console.log(chessPosition);
 
   const chessBoardOptions = {
     position: chessPosition.fen,
