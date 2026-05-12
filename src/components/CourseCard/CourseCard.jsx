@@ -15,14 +15,8 @@ const CourseCard = ({ course }) => {
   return (
     <div className="card bg-gray-50 border border-base-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       {/* Thumbnail */}
-      <figure className="relative overflow-hidden rounded-t-2xl h-44">
+      <figure className=" rounded-t-2xl h-[450px]">
         <img src={thumbnail} alt={title} className="h-auto object-cover" />
-        {/* Level pill on image */}
-        <span
-          className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full ${levelColor[level]}`}
-        >
-          {level}
-        </span>
       </figure>
 
       <div className="card-body p-4 gap-3">
@@ -43,11 +37,19 @@ const CourseCard = ({ course }) => {
         </div>
 
         {/* Rating */}
-        <div className="flex items-center gap-1 text-xs">
-          <span className="text-yellow-400 text-sm">
-            <Star size={14} />
+        <div className="flex justify-between">
+          <div className="flex items-center gap-1 text-xs">
+            <span className="text-yellow-400 text-sm">
+              <Star size={14} />
+            </span>
+            <span className="font-semibold">{rating}</span>
+          </div>
+          {/* Level pill on image */}
+          <span
+            className={`text-xs font-semibold px-2.5 py-1 rounded-full ${levelColor[level]}`}
+          >
+            {level}
           </span>
-          <span className="font-semibold">{rating}</span>
         </div>
 
         {/* Price + Buttons */}
