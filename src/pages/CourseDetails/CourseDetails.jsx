@@ -47,25 +47,16 @@ const CourseDetails = () => {
         <Link to={"/courses"}>Courses</Link> &nbsp;/&nbsp; {title}
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-10 max-w-11/12 mx-auto px-4 py-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-11/12 mx-auto px-4 py-8 lg:py-16">
         {/* Left Column - Main Content */}
         <div className="lg:col-span-2 space-y-8">
           {/* Thumbnail */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl">
+          <div className="overflow-hidden flex justify-center">
             <img
               src={thumbnail}
               alt={title}
-              className="w-full h-auto object-cover"
+              className="h-[500px] object-cover rounded-xl"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
-
-            <div className="absolute bottom-6 left-6 right-6">
-              <span
-                className={`inline-block text-sm font-semibold px-4 py-1.5 rounded-full ${levelColor[level]}`}
-              >
-                {level}
-              </span>
-            </div>
           </div>
 
           {/* Title & Rating */}
@@ -88,6 +79,13 @@ const CourseDetails = () => {
                 <Clock size={18} />
                 {duration}
               </div>
+            </div>
+            <div className="mt-5">
+              <span
+                className={`inline-block text-sm font-semibold px-4 py-1.5 rounded-full ${levelColor[level]}`}
+              >
+                {level}
+              </span>
             </div>
           </div>
 
